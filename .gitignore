@@ -1,0 +1,6 @@
+#database
+*.db
+app/*.db
+
+#cache
+app/__pycache__/
