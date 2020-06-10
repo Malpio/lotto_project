@@ -11,11 +11,12 @@ class Database:
 
     def register(self, first_name, last_name, login, password):
         try:
-            self.cursor.execute('insert into users (first_name, last_name, login, password) values (?,?,?,?)',
-                                (first_name, last_name, login, password))
+            self.cursor.execute('insert into users (first_name, last_name, login, password) values (?,?,?,?)', (first_name, last_name, login, password))
+            print(self.connection)
             self.connection.commit()
             return {'response': 'REGISTER REGISTER_OK'}
-        except sqlite3.Error:
+        except sqlite3.Error as e:
+            print('error ', e)
             return {'response': 'REGISTER USERNAME_ALREADY_EXIST'}
 
     def login(self, login, password):
@@ -62,17 +63,14 @@ class Database:
                 self.cursor.execute('update users set balance = ? where user_id = ?', (new_balance, user_id))
                 self.connection.commit()
                 return True
-            except sqlite3.Error as e:
-                print(e)
+            except sqlite3.Error:
                 return False
         else:
             return False
 
     def create_lotto(self):
         try:
-            self.cursor.execute(
-                'insert into lotto (count_of_three, count_of_four, count_of_five, count_of_six) values (?,?,?,?)',
-                (0, 0, 0, 0))
+            self.cursor.execute('insert into lotto (count_of_three, count_of_four, count_of_five, count_of_six) values (?,?,?,?)', (0, 0, 0, 0))
             self.connection.commit()
             return True
         except sqlite3.Error:
@@ -106,9 +104,7 @@ class Database:
                     now = datetime.now()
                     bought_date = now.strftime(date_format)
                     serialize_numbers = Utils.to_string(numbers)
-                    self.cursor.execute(
-                        'insert into coupons (bought_date, lotto_id, user_id, numbers) values (?,?,?,?)',
-                        (bought_date, lotto_id, user_id, serialize_numbers))
+                    self.cursor.execute('insert into coupons (bought_date, lotto_id, user_id, numbers) values (?,?,?,?)', (bought_date, lotto_id, user_id, serialize_numbers))
                     self.connection.commit()
                     return {'response': 'COUPON_BUY COUPON_BUY_OK'}
                 else:
@@ -144,18 +140,45 @@ class Database:
                 elif count_of_same_number == 6:
                     count_of_six += 1
 
-            return {'count_of_three': count_of_three, 'count_of_four': count_of_four, 'count_of_five': count_of_five,
-                    'count_of_six': count_of_six}
+            return {'count_of_three': count_of_three, 'count_of_four': count_of_four, 'count_of_five': count_of_five, 'count_of_six': count_of_six}
         except:
-            return {'count_of_three': count_of_three, 'count_of_four': count_of_four, 'count_of_five': count_of_five,
-                    'count_of_six': count_of_six}
+            return {'count_of_three': count_of_three, 'count_of_four': count_of_four, 'count_of_five': count_of_five, 'count_of_six': count_of_six}
 
     def get_user_coupons(self, user_id):
         try:
-            self.cursor.execute('select * from coupons where user_id = ?', (user_id,))
+            self.cursor.execute('select * from coupons where user_id = ? order by coupon_id desc', (user_id,))
             return self.cursor.fetchall()
         except sqlite3.Error:
             return None
+
+    def get_user_coupons_list_with_lottery(self, user_id):
+        result = []
+        coupons_list = self.get_user_coupons(user_id)
+        if not list:
+            return {'response': 'UNEXPECTED_ERROR'}
+        for el in coupons_list:
+            one_element = []
+            one_element.append(el[1])
+            one_element.append(el[4])
+            lotto = self.get_lotto_by_id(el[2])
+            if not lotto:
+                print('qwe')
+                return {'response': 'UNEXPECTED_ERROR'}
+            one_element.append(lotto[0])
+            one_element.append(lotto[1])
+            result.append(one_element)
+        result = Utils.serializer(result)
+        return {'response': 'MY_COUPONS ' + result}
+
+
+    def get_lotto_by_id(self, lotto_id):
+        try:
+            self.cursor.execute('select won_numbers, lottery_date from lotto where lotto_id = ?', (lotto_id,))
+            return self.cursor.fetchone()
+        except sqlite3.Error as e:
+            print(e)
+            return None
+
 
     def get_last_lotto(self, count):
         try:
@@ -164,3 +187,7 @@ class Database:
             return {'response': 'LAST_WON ' + last_won}
         except sqlite3.Error as e:
             return {'response': 'UNEXPECTED_ERROR'}
+
+database = Database()
+print(Utils.deserializer(database.get_user_coupons_list_with_lottery(3)['response']))
+

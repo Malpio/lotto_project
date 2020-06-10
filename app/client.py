@@ -2,6 +2,7 @@ from app.config import connection_config, tcp_socket, Connection, response_codes
 import socket
 
 
+
 class Client(Connection):
     def save_and_send_key(self, params):
         return 'qweqweqwe'
