@@ -1,3 +1,6 @@
+__pycache__/
+.DS_Store
+
 #database
 *.db
 app/*.db
