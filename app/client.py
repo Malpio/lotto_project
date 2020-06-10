@@ -10,8 +10,6 @@ class Client(Connection):
         return 'elo'
 
 
-
-
 s = tcp_socket
 
 try:
@@ -33,4 +31,4 @@ try:
     del client
 
 except socket.error:
-    print ('Error', socket.error)
+    print('Error', socket.error)
