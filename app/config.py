@@ -26,7 +26,7 @@ response_codes = {
     LAST_WON - Sprawdzanie ostatnich wygranych
     COUPON_BUY - Kupowanie losu
     MY_COUPONS - Sprawdzanie listy moich kuponów
-    .
+    WON_LIST - List ostatnich wygranych
 '''
 
 
