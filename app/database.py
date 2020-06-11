@@ -173,7 +173,7 @@ class Database:
 
     def get_lotto_by_id(self, lotto_id):
         try:
-            self.cursor.execute('select won_numbers, lottery_date from lotto where lotto_id = ?', (lotto_id,))
+            self.cursor.execute('select IFNULL(won_numbers, "brak"), IFNULL(lottery_date, "brak") from lotto where lotto_id = ?', (lotto_id,))
             return self.cursor.fetchone()
         except sqlite3.Error as e:
             print(e)
@@ -188,6 +188,12 @@ class Database:
         except sqlite3.Error as e:
             return {'response': 'UNEXPECTED_ERROR'}
 
-database = Database()
-print(Utils.deserializer(database.get_user_coupons_list_with_lottery(3)['response']))
+    def get_won_list(self):
+        try:
+            self.cursor.execute('select lottery_date , main_prize, won_numbers, count_of_three, count_of_four, count_of_five, count_of_six from lotto where won_numbers is not null order by lotto_id desc')
+            won_list = Utils.serializer(self.cursor.fetchall())
+            return {'response': 'WON_LIST ' + won_list}
+        except sqlite3.Error as e:
+            print(e)
+            return {'response': 'UNEXPECTED_ERROR'}
 

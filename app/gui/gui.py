@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 from app.gui.config import colors
 
 
@@ -11,7 +12,7 @@ class LottoGUI(Tk):
 
         self.title('Lotto')
 
-        self.minsize(900, 700)
+        self.minsize(1100, 900)
 
         container = Frame(self)
         container.place(relwidth=1, relheight=1)
@@ -68,17 +69,17 @@ class LoginPage(Frame):
         login_label.config(font=("Aria", 15))
         login_label.grid(row=0, column=0)
 
-        login_entry = Entry(input_container)
-        login_entry.grid(row=0, column=1)
+        self.login_entry = Entry(input_container)
+        self.login_entry.grid(row=0, column=1)
 
         password_label = Label(input_container, text="Hasło: ", bg=colors['light_gray'])
         password_label.config(font=("Aria", 15))
         password_label.grid(row=1, column=0, pady=20)
 
-        password_entry = Entry(input_container)
-        password_entry.grid(row=1, column=1)
+        self.password_entry = Entry(input_container, show='*')
+        self.password_entry.grid(row=1, column=1)
 
-        login_button = Button(input_container, text="Zaloguj", bg=colors['light_gray'], command=lambda: controller.navigation(MainPage))
+        login_button = Button(input_container, text="Zaloguj", bg=colors['light_gray'], command=self.login)
         login_button.config(height=2, width=15)
         login_button.grid(row=2, columnspan=2, pady=10)
 
@@ -92,6 +93,16 @@ class LoginPage(Frame):
         register_button = Button(register_container, text="Zarejestruj się!", bg=colors['light_gray'], command=lambda: controller.navigation(RegisterPage))
         register_button.config(height=1, width=10)
         register_button.grid(row=0, column=1)
+
+    def login(self):
+        login = self.login_entry.get()
+        password = self.password_entry.get()
+
+        if login and password:
+            self.controller.navigation(MainPage)
+            return
+
+        messagebox.showinfo('Logowanie', 'Wypełnij wszystkie pola formularza')
 
 
 class RegisterPage(Frame):
@@ -114,38 +125,38 @@ class RegisterPage(Frame):
         name_label.config(font=("Aria", 15))
         name_label.grid(row=0, column=0, pady=5)
 
-        name_entry = Entry(input_container)
-        name_entry.grid(row=0, column=1, pady=5)
+        self.name_entry = Entry(input_container)
+        self.name_entry.grid(row=0, column=1, pady=5)
 
         last_name_label = Label(input_container, text="Nazwisko: ", bg=colors['light_gray'])
         last_name_label.config(font=("Aria", 15))
         last_name_label.grid(row=1, column=0, pady=5)
 
-        last_name_entry = Entry(input_container)
-        last_name_entry.grid(row=1, column=1, pady=5)
+        self.last_name_entry = Entry(input_container)
+        self.last_name_entry.grid(row=1, column=1, pady=5)
 
         login_label = Label(input_container, text="Login: ", bg=colors['light_gray'])
         login_label.config(font=("Aria", 15))
         login_label.grid(row=2, column=0, pady=5)
 
-        login_entry = Entry(input_container)
-        login_entry.grid(row=2, column=1, pady=5)
+        self.login_entry = Entry(input_container)
+        self.login_entry.grid(row=2, column=1, pady=5)
 
         password_label = Label(input_container, text="Hasło: ", bg=colors['light_gray'])
         password_label.config(font=("Aria", 15))
         password_label.grid(row=3, column=0, pady=5)
 
-        password_entry = Entry(input_container)
-        password_entry.grid(row=3, column=1)
+        self.password_entry = Entry(input_container, show='*')
+        self.password_entry.grid(row=3, column=1)
 
         confirm_password_label = Label(input_container, text="Powtórz hasło: ", bg=colors['light_gray'])
         confirm_password_label.config(font=("Aria", 15))
         confirm_password_label.grid(row=4, column=0, pady=5)
 
-        confirm_password_entry = Entry(input_container)
-        confirm_password_entry.grid(row=4, column=1, pady=5)
+        self.confirm_password_entry = Entry(input_container, show='*')
+        self.confirm_password_entry.grid(row=4, column=1, pady=5)
 
-        register_button = Button(input_container, text="Zarejestruj", bg=colors['light_gray'])
+        register_button = Button(input_container, text="Zarejestruj", bg=colors['light_gray'], command=self.register)
         register_button.config(height=2, width=15)
         register_button.grid(row=5, columnspan=2, pady=15)
 
@@ -159,6 +170,26 @@ class RegisterPage(Frame):
         login_button = Button(register_container, text="Zaloguj się!", bg=colors['light_gray'], command=lambda: controller.navigation(LoginPage))
         login_button.config(height=1, width=10)
         login_button.grid(row=0, column=1)
+
+    def register(self):
+        name = self.name_entry.get()
+        last_name = self.last_name_entry.get()
+        login = self.login_entry.get()
+        password = self.password_entry.get()
+        confirm_password = self.confirm_password_entry.get()
+
+        if not (login and password and confirm_password and name and last_name):
+            messagebox.showinfo('Logowanie', 'Wypełnij wszystkie pola formularza')
+            return
+
+        if password != confirm_password or not password:
+            messagebox.showinfo('Rejestracja', 'Hasła nie są takie same')
+            return
+
+        messagebox.showinfo('Rejestracja', 'Rejestracja przebiegła pomyślnie. Możesz teraz się zalogować')
+        self.controller.navigation(LoginPage)
+
+
 
 
 class MainPage(Frame):
@@ -192,7 +223,7 @@ class MainPage(Frame):
             frame = F(main_container, self)
             self.frames[F] = frame
 
-        self.navigation(LottoBuyPage)
+        self.navigation(LottoPage)
 
     def logout(self):
         self.controller.reset_stack_then_navigate(LoginPage)
@@ -231,36 +262,55 @@ class LottoBuyPage(Frame):
         buy_label.config(font=("Aria", 18))
         buy_label.grid(columnspan=3, row=0, pady=20)
 
-        entry_1 = Entry(buy_container)
-        entry_1.grid(row=1, column=0, padx=10, pady=10)
-        entry_1.config(width=4)
+        self.entry_1 = Entry(buy_container)
+        self.entry_1.grid(row=1, column=0, padx=10, pady=10)
+        self.entry_1.config(width=4)
 
-        entry_2 = Entry(buy_container)
-        entry_2.grid(row=1, column=1, padx=10, pady=10)
-        entry_2.config(width=4)
+        self.entry_2 = Entry(buy_container)
+        self.entry_2.grid(row=1, column=1, padx=10, pady=10)
+        self.entry_2.config(width=4)
 
-        entry_3 = Entry(buy_container)
-        entry_3.grid(row=1, column=2, padx=10, pady=10)
-        entry_3.config(width=4)
+        self.entry_3 = Entry(buy_container)
+        self.entry_3.grid(row=1, column=2, padx=10, pady=10)
+        self.entry_3.config(width=4)
 
-        entry_4 = Entry(buy_container)
-        entry_4.grid(row=2, column=0)
-        entry_4.config(width=4)
+        self.entry_4 = Entry(buy_container)
+        self.entry_4.grid(row=2, column=0)
+        self.entry_4.config(width=4)
 
-        entry_5 = Entry(buy_container)
-        entry_5.grid(row=2, column=1)
-        entry_5.config(width=4)
+        self.entry_5 = Entry(buy_container)
+        self.entry_5.grid(row=2, column=1)
+        self.entry_5.config(width=4)
 
-        entry_6 = Entry(buy_container)
-        entry_6.grid(row=2, column=2)
-        entry_6.config(width=4)
+        self.entry_6 = Entry(buy_container)
+        self.entry_6.grid(row=2, column=2)
+        self.entry_6.config(width=4)
 
-        buy_button = Button(buy_container, text='Kup los', bg=colors['light_gray'], command=lambda: self.buy())
+        buy_button = Button(buy_container, text='Kup los', bg=colors['light_gray'], command=self.buy)
         buy_button.config(width=17, height=3)
         buy_button.grid(row=3, columnspan=3, pady=30)
 
     def buy(self):
-        pass
+        values = [self.entry_1.get(), self.entry_2.get(), self.entry_3.get(), self.entry_4.get(), self.entry_5.get(), self.entry_6.get()]
+        values = list(set(values))
+        try:
+            values.remove('')
+        except:
+            pass
+
+        is_ok = True
+        try:
+            for el in values:
+                v = int(el)
+                if v < 1 or v > 49:
+                    is_ok = False
+                    break
+        except ValueError:
+            is_ok = False
+
+        if len(values) != 6 or not is_ok:
+            messagebox.showinfo('Kupno Losu', 'Musisz podać 6 różnych wartości z zakresu od od 1 od 49')
+
 
 
 class MyAccountPage(Frame):
@@ -290,9 +340,9 @@ class MyAccountPage(Frame):
         balance_add_label.config(font=("Aria", 14))
         balance_add_label.grid(row=1, column=0)
 
-        balance_entry = Entry(balance_container)
-        balance_entry.config(width=5)
-        balance_entry.grid(row=1, column=1)
+        self.balance_entry = Entry(balance_container)
+        self.balance_entry.config(width=5)
+        self.balance_entry.grid(row=1, column=1)
 
         balance_add_label2 = Label(balance_container, text='zł')
         balance_add_label2.config(font=("Aria", 14))
@@ -356,7 +406,18 @@ class MyAccountPage(Frame):
         return 20
 
     def add_balance(self):
-        pass
+        balance = self.balance_entry.get()
+        check = balance.split('.')
+        if len(check) >= 2 and len(check[1]) > 2:
+            messagebox.showinfo('Doładowywanie konta', 'Podaj liczbę z precyzją maksymalnie do dwóch miejsc po przecinku')
+            return
+        try:
+            balance = float(balance)
+            messagebox.showinfo('Doładowywanie konta', 'Konto zostało zasilone kwotą ' + str(balance) + ' zł')
+        except ValueError:
+            messagebox.showinfo('Doładowywanie konta', 'Musisz podać wartość liczbową')
+
+
 
 
 class LottoPage(Frame):
@@ -364,10 +425,81 @@ class LottoPage(Frame):
         Frame.__init__(self, parent)
         self.place(relwidth=1, relheight=1)
         self.controller = controller
+        self.time_to_next_lottery = self.get_time_to_next_lottery()
 
-        main_label = Label(self, text='Wyniki losowań loterii Lotto')
+        main_label = Label(self, text='Następne losowanie za ' + self.time_to_next_lottery)
         main_label.config(font=("Aria", 20))
         main_label.pack()
+
+        main_label = Label(self, text='Historia losowań dużego lotka')
+        main_label.config(font=("Aria", 20))
+        main_label.place(relx=0.5, rely=0.1, anchor=N)
+
+        main_container = Frame(self, bg=colors['light_gray'])
+        main_container.place(relx=0.5, rely=0.16, relwidth=1, relheight=0.84, anchor=N)
+
+        result_container = Frame(main_container, bg=colors['light_gray'])
+        result_container.place(relx=0.5, rely=0.02, relheight=1, anchor=N)
+
+        headers = [
+            {
+                'column': 0,
+                'row': 0,
+                'text': 'Data losowania',
+            },
+            {
+                'column': 1,
+                'row': 0,
+                'text': 'Główna nagroda',
+            },
+            {
+                'column': 2,
+                'row': 0,
+                'text': 'Wygrane numery',
+            },
+            {
+                'column': 3,
+                'row': 0,
+                'text': 'Ilość trójek',
+            },
+            {
+                'column': 4,
+                'row': 0,
+                'text': 'Ilość czwórek',
+            },
+            {
+                'column': 5,
+                'row': 0,
+                'text': 'Ilość piątek',
+            },
+            {
+                'column': 6,
+                'row': 0,
+                'text': 'Ilość szóstek',
+            }
+        ]
+
+        for el in headers:
+            self.render_list_element(result_container, el['row'], el['column'], el['text'], 26, 15, colors['gray'])
+
+        row = 1
+        for el in self.get_last_won():
+            column = 0
+            for el2 in el:
+                self.render_list_element(result_container, row, column, el2, 6, 5, colors['light_gray'])
+                column += 1
+            row += 1
+
+    def get_last_won(self):
+        return [['07/06/2020 21:08:24', 'None', '21 22 23 1 3 32', '0', '0', '0', '0'], ['07/06/2020 21:08:20', 'None', '21 22 23 1 3 32', '0', '0', '0', '0'], ['07/06/2020 21:08:09', 'None', '21 22 23 1 3 32', '0', '0', '0', '0'], ['07/06/2020 20:39:23', 'None', '21 22 23 1 3 32', '2', '2', '0', '0']]
+
+    def get_time_to_next_lottery(self):
+        return '5 min'
+
+    def render_list_element(self, container, row, column, text, padx=0, pady=0, bg=None):
+        element = Label(container, text=text, bg=bg)
+        element.config(font=("Aria", 11), padx=padx, pady=pady)
+        element.grid(row=row, column=column)
 
 
 # class NavigationMenu:
