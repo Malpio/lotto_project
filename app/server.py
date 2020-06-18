@@ -3,17 +3,47 @@ from app.database import Database
 import ssl
 import hashlib
 import sqlite3
+import threading
 from _thread import *
 import random
 import time
+from datetime import datetime
 
-
+SERVER_CERT = 'server.cert'
+SERVER_KEY = 'server.key'
 
 server_socket = tcp_socket
 server_socket.bind(connection_config)
 server_socket.listen(5)
 
-# d = Database()
+
+
+d = Database()
+
+def start_lottery():
+    d.create_lotto()
+    idLotto = 1
+    while True:
+        if (time.localtime().tm_sec == 0 or time.localtime().tm_sec == 20 or time.localtime().tm_sec == 40):
+            numbers = []
+            result = []
+            for i in range(6):
+                x = False
+                while (x == False):
+                    r = random.randint(1, 10)
+                    if r not in numbers:
+                        numbers.append(r)
+                        result.append(str(r))
+                        x = True
+
+            result.sort(key=int)
+            print(result)
+            d.update_lotto_after_lottery(str(idLotto), result)
+            idLotto = idLotto + 1
+            d.create_lotto()
+            time.sleep(20)
+
+
 
 class Connect(Connection):
     def __init__(self, client):
@@ -82,8 +112,8 @@ class Connect(Connection):
         response = database.get_user_coupons(params[0])
         for x in response:
             print(x)
-        #print(response['response'])
-        #self.send_request(response['response'])
+        # print(response['response'])
+        # self.send_request(response['response'])
         del database
 
     def get_balance_action(self, params=None):
@@ -94,7 +124,6 @@ class Connect(Connection):
         else:
             self.send_request('GET_BALANCE NO_LOGIN')
 
-
     def unexpected_error_action(self, params=None):
         self.send_request('UNEXPECTED_ERROR')
 
@@ -102,8 +131,10 @@ class Connect(Connection):
         self.send_request('NO_COMMAND')
 
 
-
+thread1 = threading.Thread(start_lottery())
+thread1.start()
 
 while True:
     client_connect, addr = server_socket.accept()
+    # connstream = ssl.wrap_socket(client_connect, server_side=True, certfile=SERVER_CERT, keyfile=SERVER_KEY)
     client_connection = Connect(client_connect)

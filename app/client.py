@@ -1,7 +1,11 @@
 from app.config import connection_config, tcp_socket, Connection, response_codes
+from app.cert_creator import *
 from _thread import *
 import time
 from app.gui.gui import LottoGUI
+from OpenSSL import *
+import ssl
+import hashlib
 
 class Client(Connection):
     def register(self, first_name, last_name, login, password):
@@ -21,10 +25,16 @@ class Client(Connection):
     def no_command_action(self):
         print('Błędne polecenie')
 
+
 s = tcp_socket
 
 try:
     s.connect(connection_config)
+    # context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+    # context.verify_mode = ssl.CERT_REQUIRED
+    # context.load_verify_locations(SERVER_CERT)
+    # context.load_cert_chain(certfile=CERT_PATH, keyfile=KEY_PATH)
+    # secure_socket = context.wrap_socket(socket, server_side=False, server_hostname=ip)
     client = Client(s)
     gui = LottoGUI(client=client)
     gui.mainloop()
