@@ -1,15 +1,17 @@
 from tkinter import *
 from tkinter import messagebox
 from app.gui.config import colors
+from app.config import connection_config, tcp_socket, Connection, response_codes
+from app.utils import Utils
 
 
-class LottoGUI(Tk):
-    def __init__(self, *args, **kwargs):
+class LottoGUI(Tk, Connection):
+    def __init__(self, connection, *args, **kwargs):
         Tk.__init__(self, *args, **kwargs)
+        Connection.__init__(self, connection=connection)
         self.is_login = False
-        # self.socket = socket
-        # NavigationMenu(self)
 
+        # NavigationMenu(self)
         self.title('Lotto')
 
         self.minsize(1100, 900)
@@ -24,7 +26,7 @@ class LottoGUI(Tk):
             frame = F(container, self)
             self.frames[F] = frame
 
-        self.navigation(MainPage)
+        self.navigation(LoginPage)
 
     def navigation(self, context):
         if len(self.navigation_stack) >= 1:
@@ -47,6 +49,56 @@ class LottoGUI(Tk):
             frame = self.navigation_stack[-1]
             frame.place(relwidth=1, relheight=1)
             frame.tkraise()
+
+    # def register(self, first_name, last_name, login, password):
+    #     register_request = 'REGISTER ' + first_name + ' ' + last_name + ' ' + login + ' ' + password
+    #     self.send_request(register_request)
+
+    # def login(self, login, password):
+    #     login_request = 'LOGIN ' + login + ' ' + password
+    #     self.send_request(login_request)
+
+    def register_action(self, params=None):
+        if params:
+            code = params[0].upper()
+            messagebox.showinfo('Rejestracja', response_codes[code])
+            if params[0] == 'REGISTER_OK':
+                self.navigation(LoginPage)
+        else:
+            print('brak kodu odpowiedzi')
+
+    def login_action(self, params=None):
+        if params:
+            code = params[0].upper()
+            messagebox.showinfo('Logowanie', response_codes[code])
+            if params[0] == 'LOGIN_OK':
+                self.navigation(MainPage)
+                self.frames[MainPage].frames[LottoPage].get_last_won()
+                self.frames[MainPage].frames[MyAccountPage].get_account_balacne()
+        else:
+            print('brak kodu odpowiedzi')
+
+    def won_list_action(self, params=None):
+        if params:
+            last_won = Utils.deserializer(params[0])
+            self.frames[MainPage].frames[LottoPage].set_last_won(last_won)
+            self.frames[MainPage].frames[LottoPage].show_won_list()
+
+    def no_command_action(self):
+        print('Błędne polecenie')
+
+    # def add_balance_action(self, params=None):
+    #     if params:
+    #         code = params[0].upper()
+    #         messagebox.showinfo('Doładowywanie konta', response_codes[code])
+    #         if code == 'ADD_BALANCE_OK':
+
+    def get_balance_action(self, params=None):
+        if params:
+            balance = params[0]
+            print(balance)
+            self.frames[MainPage].frames[MyAccountPage].update_account_balance(balance)
+
 
 
 class LoginPage(Frame):
@@ -99,7 +151,8 @@ class LoginPage(Frame):
         password = self.password_entry.get()
 
         if login and password:
-            self.controller.navigation(MainPage)
+            login_request = 'LOGIN ' + login + ' ' + password
+            self.controller.send_request(login_request)
             return
 
         messagebox.showinfo('Logowanie', 'Wypełnij wszystkie pola formularza')
@@ -179,17 +232,15 @@ class RegisterPage(Frame):
         confirm_password = self.confirm_password_entry.get()
 
         if not (login and password and confirm_password and name and last_name):
-            messagebox.showinfo('Logowanie', 'Wypełnij wszystkie pola formularza')
+            messagebox.showinfo('Rejestracja', 'Wypełnij wszystkie pola formularza')
             return
 
         if password != confirm_password or not password:
             messagebox.showinfo('Rejestracja', 'Hasła nie są takie same')
             return
 
-        messagebox.showinfo('Rejestracja', 'Rejestracja przebiegła pomyślnie. Możesz teraz się zalogować')
-        self.controller.navigation(LoginPage)
-
-
+        register_request = 'REGISTER ' + name + ' ' + last_name + ' ' + login + ' ' + password
+        self.controller.send_request(register_request)
 
 
 class MainPage(Frame):
@@ -319,6 +370,8 @@ class MyAccountPage(Frame):
         self.place(relwidth=1, relheight=1)
         self.controller = controller
 
+        self.balance = 0
+
         main_label = Label(self, text='Moje konto')
         main_label.config(font=("Aria", 20))
         main_label.pack()
@@ -332,9 +385,9 @@ class MyAccountPage(Frame):
         balance_container = Frame(left_container)
         balance_container.place(relx=0.5, rely=0.05, relheight=0.95, anchor=N)
 
-        balance_label = Label(balance_container, text='Stan konta: ' + str(self.get_account_balacne()) + 'zł')
-        balance_label.config(font=("Aria", 14))
-        balance_label.grid(row=0, columnspan=3)
+        self.balance_label = Label(balance_container, text='Stan konta: ' + str(self.balance) + 'zł')
+        self.balance_label.config(font=("Aria", 14))
+        self.balance_label.grid(row=0, columnspan=3)
 
         balance_add_label = Label(balance_container, text='Doładuj konto kwotą: ')
         balance_add_label.config(font=("Aria", 14))
@@ -402,8 +455,12 @@ class MyAccountPage(Frame):
         return [['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'],['07/06/2020 19:39:18', '2 3 12 23 21 49', '21 22 23 1 3 32', '07/06/2020 20:39:23'], ['07/06/2020 19:38:25', '2 3 12 23 21 22', '21 22 23 1 3 32', '07/06/2020 20:39:23'], ['07/06/2020 19:37:37', '2 3 12 23 21 22', '21 22 23 1 3 32', '07/06/2020 20:39:23'], ['07/06/2020 19:31:18', '2 3 12 23 21 21', '21 22 23 1 3 32', '07/06/2020 20:39:23']]
 
     def get_account_balacne(self):
-        # return self.balance
-        return 20
+        self.controller.controller.send_request('GET_BALANCE')
+
+    def update_account_balance(self, balance):
+        self.balance = balance
+        self.balance_label.grid_forget()
+        self.balance_label.grid(row=0, columnspan=3)
 
     def add_balance(self):
         balance = self.balance_entry.get()
@@ -427,6 +484,8 @@ class LottoPage(Frame):
         self.controller = controller
         self.time_to_next_lottery = self.get_time_to_next_lottery()
 
+        self.last_won = []
+
         main_label = Label(self, text='Następne losowanie za ' + self.time_to_next_lottery)
         main_label.config(font=("Aria", 20))
         main_label.pack()
@@ -438,8 +497,8 @@ class LottoPage(Frame):
         main_container = Frame(self, bg=colors['light_gray'])
         main_container.place(relx=0.5, rely=0.16, relwidth=1, relheight=0.84, anchor=N)
 
-        result_container = Frame(main_container, bg=colors['light_gray'])
-        result_container.place(relx=0.5, rely=0.02, relheight=1, anchor=N)
+        self.result_container = Frame(main_container, bg=colors['light_gray'])
+        self.result_container.place(relx=0.5, rely=0.02, relheight=1, anchor=N)
 
         headers = [
             {
@@ -480,18 +539,34 @@ class LottoPage(Frame):
         ]
 
         for el in headers:
-            self.render_list_element(result_container, el['row'], el['column'], el['text'], 26, 15, colors['gray'])
+            self.render_list_element(self.result_container, el['row'], el['column'], el['text'], 26, 15, colors['gray'])
 
+        self.show_won_list()
+
+        # row = 1
+        # for el in self.last_won:
+        #     column = 0
+        #     for el2 in el:
+        #         self.render_list_element(result_container, row, column, el2, 6, 5, colors['light_gray'])
+        #         column += 1
+        #     row += 1
+
+    def show_won_list(self):
+        self.result_container.pack_forget()
         row = 1
-        for el in self.get_last_won():
+        for el in self.last_won:
             column = 0
             for el2 in el:
-                self.render_list_element(result_container, row, column, el2, 6, 5, colors['light_gray'])
+                self.render_list_element(self.result_container, row, column, el2, 6, 5, colors['light_gray'])
                 column += 1
             row += 1
 
+    def set_last_won(self, last_won):
+        self.last_won = last_won
+
     def get_last_won(self):
-        return [['07/06/2020 21:08:24', 'None', '21 22 23 1 3 32', '0', '0', '0', '0'], ['07/06/2020 21:08:20', 'None', '21 22 23 1 3 32', '0', '0', '0', '0'], ['07/06/2020 21:08:09', 'None', '21 22 23 1 3 32', '0', '0', '0', '0'], ['07/06/2020 20:39:23', 'None', '21 22 23 1 3 32', '2', '2', '0', '0']]
+        self.controller.controller.send_request('WON_LIST')
+        # return [['07/06/2020 21:08:24', 'None', '21 22 23 1 3 32', '0', '0', '0', '0'], ['07/06/2020 21:08:20', 'None', '21 22 23 1 3 32', '0', '0', '0', '0'], ['07/06/2020 21:08:09', 'None', '21 22 23 1 3 32', '0', '0', '0', '0'], ['07/06/2020 20:39:23', 'None', '21 22 23 1 3 32', '2', '2', '0', '0']]
 
     def get_time_to_next_lottery(self):
         return '5 min'
@@ -512,6 +587,9 @@ class LottoPage(Frame):
 #         master.config(menu=menubar)
 
 
-app = LottoGUI()
+s = tcp_socket
+s.connect(connection_config)
+
+app = LottoGUI(connection=s)
 app.mainloop()
 

@@ -15,19 +15,25 @@ response_codes = {
     'BALANCE_AMOUNT': 'Ilość srodków na koncie',
     'NO_ENOUGH_BALANCE': 'Ilość środków na koncie jest niewystarczające',
     'COUPON_BUY_OK': 'Pomyślnie kupiono los',
-    'COUPON_INVALID_NUMBERS': 'Ilość liczb lub ich wartości są nieprawidłowe'
+    'COUPON_INVALID_NUMBERS': 'Ilość liczb lub ich wartości są nieprawidłowe',
+    'ADD_BALANCE_OK': 'Konto zostało doładowane',
+    'ADD_BALANCE_FAIL': 'Nie udało się dodać środków',
+    'NO_LOGIN': 'Nie jesteś zalogowany'
 }
 
 '''COMMANDS LIST
     ELO + public_key - Nawiązanie połączenia szyfrowanego
     REGISTER - Rejestracja użytkownika
     LOGIN - Logowanie użytkownika
-    BALANCE - Zarządzanie stanem konta
+    ADD_BALANCE - Dodawanie środków na konto
+    GET_BALANCE - Sprawdzanie stanu konta
     UNEXPECTED_ERROR - Nieoczekiwany błąd serwera
     LAST_WON - Sprawdzanie ostatnich wygranych
     COUPON_BUY - Kupowanie losu
     MY_COUPONS - Sprawdzanie listy moich kuponów
     WON_LIST - List ostatnich wygranych
+    NO_COMMAND - Nie zdefiniowano akcji dla polecenia
+    PARAMS_COUNT - Niepoprawna liczba parametrów
 '''
 
 
@@ -50,6 +56,7 @@ class Connection:
     def send_request(self, request):
         request = request + '\r\n'
         self.connection.sendall(request.encode())
+        print('poszlo')
 
     def get_response(self):
         while self.main_connection:
@@ -78,21 +85,27 @@ class Connection:
     def define_action(self, command, params):
         lower_command = command.lower()
         if lower_command == 'elo':
-            self.save_and_send_key_action(params)
+            self.save_and_send_key_action(params=params)
         elif lower_command == 'register':
-            self.register_action(params)
+            self.register_action(params=params)
         elif lower_command == 'login':
-            self.login_action(params)
+            self.login_action(params=params)
         elif lower_command == 'add_balance':
-            self.add_balance_action(params)
+            self.add_balance_action(params=params)
         elif lower_command == 'unexpected_error':
-            self.unexpected_error_action(params)
+            self.unexpected_error_action(params=params)
         elif lower_command == 'last_won':
-            self.last_won_action(params)
+            self.last_won_action(params=params)
         elif lower_command == 'coupon_buy':
-            self.coupon_buy_action(params)
+            self.coupon_buy_action(params=params)
         elif lower_command == 'my_coupons':
-            self.my_coupons_action(params)
+            self.my_coupons_action(params=params)
+        elif lower_command == 'won_list':
+            self.won_list_action(params=params)
+        elif lower_command == 'get_balance':
+            self.get_balance_action(params=params)
+        else:
+            self.no_command_action()
 
     @abc.abstractmethod
     def save_and_send_key_action(self, params=None):
@@ -124,6 +137,18 @@ class Connection:
 
     @abc.abstractmethod
     def unexpected_error_action(self, params=None):
+        return
+
+    @abc.abstractmethod
+    def no_command_action(self):
+        return
+
+    @abc.abstractmethod
+    def won_list_action(self, params=None):
+        return
+
+    @abc.abstractmethod
+    def get_balance_action(self, params=None):
         return
 
     # def sefe_connection(self, public_key, certificate):
