@@ -1,7 +1,7 @@
 from app.config import connection_config, tcp_socket, Connection, response_codes
 from _thread import *
 import time
-
+from app.gui.gui import LottoGUI
 
 class Client(Connection):
     def register(self, first_name, last_name, login, password):
@@ -12,13 +12,22 @@ class Client(Connection):
         login_request = 'LOGIN ' + login + ' ' + password
         self.send_request(login_request)
 
+    def register_action(self, params=None, additional_action=None):
+        if params:
+            print(response_codes[params[0]])
+        else:
+            print('brak kodu odpowiedzi')
+
+    def no_command_action(self):
+        print('Błędne polecenie')
+
 s = tcp_socket
 
 try:
     s.connect(connection_config)
     client = Client(s)
-    while True:
-        request = input('Podaj polecenie: ')
+    gui = LottoGUI(client=client)
+    gui.mainloop()
 
 except:
     print('error')

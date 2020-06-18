@@ -10,9 +10,11 @@ class Database:
         self.cursor = self.connection.cursor()
 
     def register(self, first_name, last_name, login, password):
+        print('passw', password)
         try:
+
             self.cursor.execute('insert into users (first_name, last_name, login, password) values (?,?,?,?)', (first_name, last_name, login, password))
-            print(self.connection)
+
             self.connection.commit()
             return {'response': 'REGISTER REGISTER_OK'}
         except sqlite3.Error as e:
@@ -25,7 +27,7 @@ class Database:
         if user:
             return {'response': 'LOGIN LOGIN_OK', 'user_id': user[0]}
         else:
-            return {'response': 'LOGIN LOGIN_OK'}
+            return {'response': 'LOGIN LOGIN_FAIL'}
 
     def get_user(self, user_id):
         try:
@@ -38,7 +40,7 @@ class Database:
         user = self.get_user(user_id)
         if user:
             balance = str(user[3])
-            return {'response': 'BALANCE BALANCE_AMOUNT ' + balance}
+            return {'response': 'GET_BALANCE ' + balance}
         else:
             return {'response': 'UNEXPECTED_ERROR'}
 
@@ -196,3 +198,4 @@ class Database:
         except sqlite3.Error as e:
             print(e)
             return {'response': 'UNEXPECTED_ERROR'}
+
