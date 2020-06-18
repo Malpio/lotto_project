@@ -13,6 +13,7 @@ server_socket = tcp_socket
 server_socket.bind(connection_config)
 server_socket.listen(5)
 
+d = Database()
 
 class Connect(Connection):
     def register_action(self, params=None):

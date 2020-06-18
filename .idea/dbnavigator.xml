@@ -16,7 +16,7 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="windows-1250" />
+      <charset value="UTF-8" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -27,8 +27,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="c98497fc-5f3a-4fd8-99ba-2118bc444858">
-      <console name="Connection" type="STANDARD" schema="main" session="Main"><![CDATA[select * from coupons]]></console>
-      <console name="Connection 1" type="STANDARD" schema="main" session="Main"><![CDATA[select * from users]]></console>
+      <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[select * from users]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -75,7 +74,7 @@
           <port value="1234" />
           <database value="database" />
           <files>
-            <file path="D:\ProjektPAS\lotto_project\app\lotto.db" schema="main" />
+            <file path="$PROJECT_DIR$/app/lotto.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
