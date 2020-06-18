@@ -1,5 +1,6 @@
 import socket
 import abc
+from _thread import *
 
 tcp_socket = serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 connection_config = ('127.0.0.1', 40000)
@@ -36,6 +37,12 @@ class Connection:
     def __init__(self, connection):
         self.connection = connection
         self.client_public_key = None
+        self.main_connection = True
+        start_new_thread(self.get_response, ())
+
+    def disconnect(self):
+        self.connection.close()
+        self.main_connection = False
 
     def __del__(self):
         self.connection.close()
@@ -45,12 +52,16 @@ class Connection:
         self.connection.sendall(request.encode())
 
     def get_response(self):
-        response = b''
-        while not b'\r\n' in response:
-            data = self.connection.recv(1)
-            response += data
-        response = response.decode()[:-2]
-        return response
+        while self.main_connection:
+            response = b''
+            while not b'\r\n' in response:
+                data = self.connection.recv(1)
+                response += data
+            response = response.decode()[:-2]
+            command_and_params = Connection.get_command_and_params(response)
+            print(command_and_params)
+            start_new_thread(self.define_action, (command_and_params['command'], command_and_params['params']))
+
 
     @staticmethod
     def get_command_and_params(response):
@@ -67,48 +78,52 @@ class Connection:
     def define_action(self, command, params):
         lower_command = command.lower()
         if lower_command == 'elo':
-            self.save_and_send_key(params)
+            self.save_and_send_key_action(params)
         elif lower_command == 'register':
-            self.register(params)
+            self.register_action(params)
         elif lower_command == 'login':
-            self.login(params)
+            self.login_action(params)
         elif lower_command == 'add_balance':
-            self.balance(params)
+            self.add_balance_action(params)
         elif lower_command == 'unexpected_error':
-            self.unexpected_error(params)
+            self.unexpected_error_action(params)
         elif lower_command == 'last_won':
-            self.last_won(params)
+            self.last_won_action(params)
         elif lower_command == 'coupon_buy':
-            self.coupon_buy(params)
+            self.coupon_buy_action(params)
         elif lower_command == 'my_coupons':
-            self.my_coupons(params)
+            self.my_coupons_action(params)
 
     @abc.abstractmethod
-    def save_and_send_key(self, params):
+    def save_and_send_key_action(self, params=None):
         return
 
     @abc.abstractmethod
-    def register(self, params):
+    def register_action(self, params=None):
         return
 
     @abc.abstractmethod
-    def login(self, params):
+    def login_action(self, params=None):
         return
 
     @abc.abstractmethod
-    def add_balance(self, params):
+    def add_balance_action(self, params=None):
         return
 
     @abc.abstractmethod
-    def last_won(self, params):
+    def last_won_action(self, params=None):
         return
 
     @abc.abstractmethod
-    def coupon_buy(self, params):
+    def coupon_buy_action(self, params=None):
         return
 
     @abc.abstractmethod
-    def my_coupons(self, params):
+    def my_coupons_action(self, params=None):
+        return
+
+    @abc.abstractmethod
+    def unexpected_error_action(self, params=None):
         return
 
     # def sefe_connection(self, public_key, certificate):
