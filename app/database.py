@@ -206,3 +206,16 @@ class Database:
         except sqlite3.Error as e:
             print(e)
             return {'response': 'UNEXPECTED_ERROR'}
+
+    def get_last_lottery_id(self):
+        try:
+            self.cursor.execute(
+                'select lotto_id from lotto order by lotto_id desc limit 1')
+            won_list = Utils.serializer(self.cursor.fetchall())
+            return {'response': 'WON_LIST ' + won_list}
+        except sqlite3.Error as e:
+            print(e)
+            return {'response': 'UNEXPECTED_ERROR'}
+
+
+d = Database()

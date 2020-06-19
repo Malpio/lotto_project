@@ -16,13 +16,23 @@ server_socket = tcp_socket
 server_socket.bind(connection_config)
 server_socket.listen(5)
 
-
-
 d = Database()
+
+
+def get_lotto_id():
+    rr = d.get_last_lottery_id()
+    r = rr['response']
+    res = r[9:].split(",", 1)
+    # if res == ['']:
+    #     return 1
+    # else:
+    #     print(res[0])
+    return int(res[0])
+
 
 def start_lottery():
     d.create_lotto()
-    idLotto = 1
+    idLotto = get_lotto_id()
     while True:
         if (time.localtime().tm_sec == 0 or time.localtime().tm_sec == 20 or time.localtime().tm_sec == 40):
             numbers = []
@@ -30,7 +40,7 @@ def start_lottery():
             for i in range(6):
                 x = False
                 while (x == False):
-                    r = random.randint(1, 10)
+                    r = random.randint(1, 6)
                     if r not in numbers:
                         numbers.append(r)
                         result.append(str(r))
@@ -39,10 +49,9 @@ def start_lottery():
             result.sort(key=int)
             print(result)
             d.update_lotto_after_lottery(str(idLotto), result)
-            idLotto = idLotto + 1
             d.create_lotto()
+            idLotto = get_lotto_id()
             time.sleep(20)
-
 
 
 class Connect(Connection):
