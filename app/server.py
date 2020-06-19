@@ -7,6 +7,7 @@ import threading
 from _thread import *
 import random
 import time
+import logging
 from datetime import datetime
 
 SERVER_CERT = 'server.cert'
@@ -23,35 +24,43 @@ def get_lotto_id():
     rr = d.get_last_lottery_id()
     r = rr['response']
     res = r[9:].split(",", 1)
-    # if res == ['']:
-    #     return 1
-    # else:
-    #     print(res[0])
+    if res == ['']:
+        d.create_lotto()
+        rr = d.get_last_lottery_id()
+        r = rr['response']
+        res = r[9:].split(",", 1)
+    # print(res[0])
     return int(res[0])
 
 
-def start_lottery():
-    d.create_lotto()
-    idLotto = get_lotto_id()
-    while True:
-        if (time.localtime().tm_sec == 0 or time.localtime().tm_sec == 20 or time.localtime().tm_sec == 40):
-            numbers = []
-            result = []
-            for i in range(6):
-                x = False
-                while (x == False):
-                    r = random.randint(1, 6)
-                    if r not in numbers:
-                        numbers.append(r)
-                        result.append(str(r))
-                        x = True
+class Game:
+    def __init__(self, ):
+        self.userID = None
 
-            result.sort(key=int)
-            print(result)
-            d.update_lotto_after_lottery(str(idLotto), result)
-            d.create_lotto()
-            idLotto = get_lotto_id()
-            time.sleep(20)
+    def start_lottery(self):
+        global d
+        d = Database()
+        idLotto = get_lotto_id()
+        while True:
+            if (time.localtime().tm_sec == 0 and time.localtime().tm_min % 2 == 0):
+                numbers = []
+                result = []
+                for i in range(6):
+                    x = False
+                    while (x == False):
+                        r = random.randint(1, 49)
+                        if r not in numbers:
+                            numbers.append(r)
+                            result.append(str(r))
+                            x = True
+
+                d = Database()
+                result.sort(key=int)
+                d.update_lotto_after_lottery(str(idLotto), result)
+                d.create_lotto()
+                idLotto = get_lotto_id()
+                del d
+                time.sleep(120)
 
 
 class Connect(Connection):
@@ -140,9 +149,8 @@ class Connect(Connection):
         self.send_request('NO_COMMAND')
 
 
-thread1 = threading.Thread(start_lottery())
-thread1.start()
-
+g = Game()
+start_new_thread(g.start_lottery, ())
 while True:
     client_connect, addr = server_socket.accept()
     # connstream = ssl.wrap_socket(client_connect, server_side=True, certfile=SERVER_CERT, keyfile=SERVER_KEY)

@@ -216,6 +216,3 @@ class Database:
         except sqlite3.Error as e:
             print(e)
             return {'response': 'UNEXPECTED_ERROR'}
-
-
-d = Database()

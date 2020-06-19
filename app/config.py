@@ -1,11 +1,21 @@
 import socket
 import abc
 from _thread import *
+from datetime import datetime
 
 tcp_socket = serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 connection_config = ('127.0.0.1', 40000)
 date_format = '%d/%m/%Y %H:%M:%S'
 lotto_price = 5
+
+
+def save_logs(client, action):
+    f = open("log.txt", "a")
+    now = datetime.now()
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S:%f")
+    f.write(dt_string + ": " + str(client) + ": " + str(action) + "\n")
+    f.close()
+
 
 response_codes = {
     'REGISTER_OK': 'Rejestracja powiodła się',
@@ -54,7 +64,9 @@ class Connection:
         self.connection.close()
 
     def send_request(self, request):
+        save_logs(self.connection, request)
         request = request + '\r\n'
+        print("X:" + request)
         self.connection.sendall(request.encode())
         print('poszlo')
 
@@ -68,7 +80,6 @@ class Connection:
             command_and_params = Connection.get_command_and_params(response)
             print(command_and_params)
             start_new_thread(self.define_action, (command_and_params['command'], command_and_params['params']))
-
 
     @staticmethod
     def get_command_and_params(response):
