@@ -1,0 +1,545 @@
+20/06/2020 11:39:51:347760: <socket.socket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53461), raddr=('127.0.0.1', 40001)>: LOGIN asd asd
+20/06/2020 11:40:11:824335: <socket.socket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53461), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 11:40:13:635901: <socket.socket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53461), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:40:13:636897: <socket.socket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53461), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 11:40:13:637894: <socket.socket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53461), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 11:45:03:012755: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53471), raddr=('127.0.0.1', 40001)>: REGISTER asdasd sadsadsad sadasdasda aaaaa
+20/06/2020 11:45:08:553735: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53471), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 11:45:10:480220: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53471), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:45:10:480220: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53471), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 11:45:10:480220: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53471), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 11:45:14:301655: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53471), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 11:45:14:301655: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53471), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 11:45:21:594450: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53471), raddr=('127.0.0.1', 40001)>: ADD_BALANCE 12
+20/06/2020 11:45:31:593071: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53471), raddr=('127.0.0.1', 40001)>: COUPON_BUY 1&2&3&4&5&6
+20/06/2020 11:45:35:558925: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53471), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 11:45:35:558925: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53471), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 11:45:38:838889: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53471), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:50:18:729605: <socket.socket fd=760, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53498), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 11:50:31:560315: <socket.socket fd=760, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53498), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 11:51:57:062319: <socket.socket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53507), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 11:53:38:438040: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 11:53:46:052319: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: REGISTER a a a a
+20/06/2020 11:53:51:211192: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 11:53:52:422073: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:53:52:423069: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 11:53:52:423069: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 11:53:57:054156: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:54:00:133416: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 11:54:00:133416: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 11:54:03:543018: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: ADD_BALANCE 22
+20/06/2020 11:54:13:894139: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: COUPON_BUY 1&2&3&4&5&6
+20/06/2020 11:54:16:101244: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: COUPON_BUY 1&2&3&4&5&6
+20/06/2020 11:54:17:677696: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: COUPON_BUY 1&2&3&4&5&6
+20/06/2020 11:54:19:616265: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: COUPON_BUY 1&2&3&4&5&6
+20/06/2020 11:54:21:247145: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: COUPON_BUY 1&2&3&4&5&6
+20/06/2020 11:54:24:273204: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 11:54:24:273204: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 11:54:28:557638: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:54:30:119997: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:54:35:826225: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:54:40:927719: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:54:57:210655: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:55:05:678911: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 11:55:05:678911: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 11:55:20:753168: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:55:25:987643: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:55:27:171833: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:56:07:489038: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:56:11:900253: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 11:56:11:900253: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 11:56:21:741535: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:56:41:412694: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 11:56:41:412694: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 11:56:44:875305: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:56:52:596288: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 11:56:53:948500: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:56:53:949499: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 11:56:53:949499: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 11:57:09:325115: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 11:57:09:326111: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 11:57:50:193091: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 11:57:53:189719: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 11:57:53:189719: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53513), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 12:00:12:680984: <socket.socket fd=492, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53544), raddr=('127.0.0.1', 40001)>: LOGIN 1 1
+20/06/2020 12:00:16:110323: <socket.socket fd=492, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53544), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 12:00:17:166746: <socket.socket fd=492, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53544), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 12:00:17:166746: <socket.socket fd=492, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53544), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 12:00:17:166746: <socket.socket fd=492, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53544), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 12:00:25:235775: <socket.socket fd=492, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53544), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 12:00:25:235775: <socket.socket fd=492, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53544), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 12:00:29:831927: <socket.socket fd=492, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53544), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 12:54:31:943172: <socket.socket fd=552, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53788), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 12:54:33:055654: <socket.socket fd=552, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53788), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 12:54:33:055654: <socket.socket fd=552, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53788), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 12:54:33:055654: <socket.socket fd=552, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53788), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 12:54:50:502693: <socket.socket fd=552, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53788), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 12:54:55:443536: <socket.socket fd=552, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53788), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 12:54:59:996309: <socket.socket fd=552, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53788), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 12:55:48:025865: <socket.socket fd=476, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53794), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 12:55:49:349569: <socket.socket fd=476, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53794), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 12:55:49:349569: <socket.socket fd=476, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53794), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 12:55:49:349569: <socket.socket fd=476, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53794), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 12:55:51:320069: <socket.socket fd=476, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53794), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 12:55:55:503423: <socket.socket fd=476, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53794), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 12:56:50:596529: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 12:56:51:747839: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 12:56:51:747839: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 12:56:51:747839: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 12:56:52:992675: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 12:56:57:496412: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: LOGIN asd sad
+20/06/2020 12:57:05:517595: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 12:57:06:578187: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 12:57:06:579188: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 12:57:06:579188: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 12:57:09:118551: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 12:57:11:606667: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 12:57:12:279447: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 12:57:31:620198: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 12:57:31:621200: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 12:57:33:532651: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 12:57:35:446805: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 12:57:43:619498: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 12:57:43:619498: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 12:57:58:713882: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 12:57:58:713882: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 12:57:59:919907: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: ADD_BALANCE 22
+20/06/2020 12:58:11:494571: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: COUPON_BUY 6&1&8&4&2&7
+20/06/2020 12:58:13:489594: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 12:58:13:489594: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53799), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 13:02:04:500389: <socket.socket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53832), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 13:02:05:969046: <socket.socket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53832), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 13:02:05:969046: <socket.socket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53832), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 13:02:05:969046: <socket.socket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 53832), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:17:23:027513: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 14:17:24:417894: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:17:24:422874: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:17:24:422874: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:17:39:947343: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: COUPON_BUY 1&2&3&4&5&6
+20/06/2020 14:17:43:257385: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:17:45:265102: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:17:45:265102: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:17:48:971023: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:18:07:228059: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:18:10:736864: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:18:10:736864: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:18:14:145870: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:18:45:600225: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:18:48:386595: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:19:03:248284: <socket.socket fd=512, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54201), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:47:11:318475: <socket.socket fd=700, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54356), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 14:47:13:117681: <socket.socket fd=700, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54356), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:47:13:117681: <socket.socket fd=700, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54356), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:47:13:119700: <socket.socket fd=700, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54356), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:47:29:522950: <socket.socket fd=464, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54358), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 14:47:30:843410: <socket.socket fd=464, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54358), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:47:30:850968: <socket.socket fd=464, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54358), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:47:30:851499: <socket.socket fd=464, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54358), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:47:43:659625: <socket.socket fd=464, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54358), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:47:43:659625: <socket.socket fd=464, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54358), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:50:14:295642: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: REGISTER a a a a
+20/06/2020 14:50:18:780384: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 14:50:19:721883: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:50:19:722882: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:50:19:722882: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:50:22:901655: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:50:22:901655: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:50:34:060904: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: ADD_BALANCE 122
+20/06/2020 14:50:46:704686: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:50:46:705684: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:50:47:891441: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:50:49:264021: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:50:49:264021: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:50:50:249386: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:50:51:674912: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:50:53:140692: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:50:54:509714: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:50:54:509714: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:50:56:174349: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:51:01:082547: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:51:11:698465: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: COUPON_BUY 1&2&3&4&5&6
+20/06/2020 14:51:14:738577: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:51:20:189010: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:51:20:189010: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:51:27:318432: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:51:57:113384: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:51:59:361791: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:52:02:505545: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:52:03:002937: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:52:44:446276: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:52:44:446276: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:53:04:405605: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:53:10:856118: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:53:10:856118: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:53:23:846240: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: ADD_BALANCE 122
+20/06/2020 14:53:27:130546: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:53:27:130546: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:53:27:979486: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:53:27:979486: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:53:28:162994: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:53:28:163992: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:53:29:221001: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:53:37:855513: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: COUPON_BUY 1&2&3&41&32&43
+20/06/2020 14:53:40:034396: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:53:40:685726: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:53:42:955199: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:53:42:955199: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:53:56:222616: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:53:58:603401: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:53:59:695551: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:54:00:240992: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:54:01:366356: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:54:04:037676: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:54:04:037676: <socket.socket fd=788, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54383), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:54:50:525823: <socket.socket fd=704, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54405), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 14:54:51:610464: <socket.socket fd=704, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54405), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:54:51:611443: <socket.socket fd=704, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54405), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 14:54:51:611443: <socket.socket fd=704, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54405), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 14:55:28:211640: <socket.socket fd=704, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54405), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:55:29:316158: <socket.socket fd=704, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54405), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:55:32:002260: <socket.socket fd=704, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54405), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 14:55:55:767719: <socket.socket fd=704, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54405), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 15:03:57:947267: <socket.socket fd=732, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54440), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 15:03:58:847110: <socket.socket fd=732, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54440), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 15:03:58:854131: <socket.socket fd=732, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54440), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 15:03:58:854131: <socket.socket fd=732, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 54440), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 16:51:24:401408: <ssl.SSLSocket fd=684, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55006), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 16:51:27:876410: <ssl.SSLSocket fd=684, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55006), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 16:51:29:293585: <ssl.SSLSocket fd=684, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55006), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 16:51:29:293585: <ssl.SSLSocket fd=684, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55006), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 16:51:29:293585: <ssl.SSLSocket fd=684, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55006), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 16:52:54:450082: <ssl.SSLSocket fd=452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55010), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 16:52:58:984011: <ssl.SSLSocket fd=452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55010), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 16:53:09:190676: <ssl.SSLSocket fd=452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55010), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 16:53:09:190676: <ssl.SSLSocket fd=452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55010), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 16:53:09:190676: <ssl.SSLSocket fd=452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55010), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 16:53:09:190676: <ssl.SSLSocket fd=452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55010), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 16:54:44:229519: <ssl.SSLSocket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55011), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 16:55:19:201343: <ssl.SSLSocket fd=444, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55013), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:01:12:612925: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:01:17:003100: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 17:01:18:075674: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:01:18:076672: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:01:18:077671: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:01:18:077671: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:01:35:394378: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:01:37:259995: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:01:37:449743: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:01:37:606000: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:01:40:535963: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:01:41:404946: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:01:41:576785: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:01:46:770737: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 17:01:47:538707: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 17:01:48:006210: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 17:01:48:209290: <ssl.SSLSocket fd=664, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55018), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 17:05:58:040488: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55021), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:06:00:575870: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55021), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 17:06:01:612604: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55021), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:06:01:612604: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55021), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:06:01:612604: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55021), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:06:01:612604: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55021), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:10:19:614116: <socket.socket fd=452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55025), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:11:54:476750: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:12:02:028375: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 17:12:03:541284: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:12:03:542281: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:12:03:543280: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:12:12:402192: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:12:12:402192: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:12:12:423135: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:12:12:424133: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:12:12:426129: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:12:12:427138: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:12:12:455051: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:12:12:456069: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:12:12:481013: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:12:12:481979: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:12:12:483974: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:12:12:484996: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:12:12:515233: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:12:12:516230: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:12:14:118088: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:12:14:118088: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:12:18:569014: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:12:52:311514: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55027), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 17:13:23:413367: <socket.socket fd=688, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55029), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:13:26:069081: <socket.socket fd=688, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55029), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 17:13:27:490035: <socket.socket fd=688, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55029), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:13:27:498072: <socket.socket fd=688, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55029), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:13:27:498597: <socket.socket fd=688, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55029), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:13:31:199426: <socket.socket fd=688, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55029), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:13:31:200425: <socket.socket fd=688, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55029), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:13:38:551829: <socket.socket fd=688, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55029), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 17:13:38:553825: <socket.socket fd=688, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55029), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 17:13:38:555819: <socket.socket fd=688, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55029), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 17:15:01:842987: <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55038), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:15:03:905586: <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55038), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 17:15:04:961833: <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55038), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:15:04:961833: <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55038), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:15:04:961833: <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55038), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:15:19:399776: <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55038), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:15:19:399776: <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55038), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:15:24:243905: <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55038), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:15:26:099260: <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55038), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:15:26:100246: <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55038), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:16:09:815036: <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55038), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:16:13:354301: <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55038), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:16:13:354301: <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55038), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:16:27:892860: <socket.socket fd=520, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55038), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 17:17:03:363180: <socket.socket fd=704, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55049), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:18:31:238593: <socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55057), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 17:18:32:587695: <socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55057), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:18:32:588694: <socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55057), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:18:32:589691: <socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55057), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:18:32:589691: <socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55057), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:18:37:191525: <socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55057), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:18:37:191525: <socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55057), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:18:40:502188: <socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55057), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:18:41:697251: <socket.socket fd=368, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55057), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 17:20:17:279296: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 17:20:18:609613: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:20:18:609613: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:20:18:609613: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:20:18:609613: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:20:21:241485: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:20:21:242484: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:20:35:443600: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:20:35:443600: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:20:38:493801: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:20:38:493801: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:20:41:545657: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:20:41:545657: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:20:43:145220: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:20:43:146217: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:20:44:440756: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:20:44:440756: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:20:45:768972: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:20:45:768972: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:20:48:474197: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:20:48:474197: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:20:49:204692: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:20:49:204692: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:20:50:175469: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:20:50:175469: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:20:51:534924: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:20:51:534924: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:20:52:505098: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:20:52:506088: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:20:53:281017: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:20:53:282014: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:21:02:314385: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:21:02:315381: <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55062), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:22:41:527670: <ssl.SSLSocket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55073), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 17:22:42:575701: <ssl.SSLSocket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55073), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:22:42:585723: <ssl.SSLSocket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55073), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:22:42:585723: <ssl.SSLSocket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55073), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:22:42:585723: <ssl.SSLSocket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55073), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:22:46:253834: <ssl.SSLSocket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55073), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:22:46:253834: <ssl.SSLSocket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55073), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:22:49:505023: <ssl.SSLSocket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55073), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:22:49:505023: <ssl.SSLSocket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55073), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:23:01:904525: <ssl.SSLSocket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55073), raddr=('127.0.0.1', 40001)>: COUPON_BUY 12&2&3&4&5&6
+20/06/2020 17:23:17:752537: <ssl.SSLSocket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55073), raddr=('127.0.0.1', 40001)>: COUPON_BUY 12&2&3&4&5&6
+20/06/2020 17:25:38:597998: <ssl.SSLSocket fd=672, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55081), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 17:25:39:494682: <ssl.SSLSocket fd=672, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55081), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:25:39:494682: <ssl.SSLSocket fd=672, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55081), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:25:39:495680: <ssl.SSLSocket fd=672, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55081), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:25:39:496677: <ssl.SSLSocket fd=672, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55081), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:25:50:400650: <ssl.SSLSocket fd=672, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55081), raddr=('127.0.0.1', 40001)>: COUPON_BUY 12&2&3&4&5&6
+20/06/2020 17:25:52:844718: <ssl.SSLSocket fd=672, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55081), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:25:52:844718: <ssl.SSLSocket fd=672, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55081), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:25:57:564401: <ssl.SSLSocket fd=672, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55081), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:25:57:564401: <ssl.SSLSocket fd=672, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55081), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:27:59:831190: <ssl.SSLSocket fd=500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55093), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 17:28:00:806554: <ssl.SSLSocket fd=500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55093), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:28:00:807553: <ssl.SSLSocket fd=500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55093), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:28:00:808550: <ssl.SSLSocket fd=500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55093), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:28:00:808550: <ssl.SSLSocket fd=500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55093), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:28:01:700720: <ssl.SSLSocket fd=500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55093), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:28:01:700720: <ssl.SSLSocket fd=500, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55093), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:28:47:630609: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 17:28:48:805227: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:28:48:806219: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:28:48:806219: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:28:48:807217: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:29:27:489247: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: COUPON_BUY 1&2&3&4&6&8
+20/06/2020 17:29:45:569892: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:29:45:570912: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:30:02:235219: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:02:235219: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:09:807890: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:09:808889: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:12:357622: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:12:358623: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:12:950527: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:12:950527: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:13:414309: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:13:414309: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:13:581871: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:13:581871: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:13:685717: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:13:685717: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:13:816740: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:13:816740: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:13:910465: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:13:910465: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:14:051034: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:14:051034: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:14:176024: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:14:176024: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:14:285377: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:14:285377: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:14:425974: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:14:425974: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:14:553460: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:14:553460: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:14:703250: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:14:703250: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:14:838887: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:14:838887: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:30:15:317628: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:15:799320: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:16:179243: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:17:211554: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:17:373097: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:18:130307: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:18:270926: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:20:392709: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:20:533302: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:20:700794: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:21:296772: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:21:446383: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:22:003871: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:22:165461: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:24:066165: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:24:223499: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:25:119305: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:25:275865: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:26:979693: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:27:142238: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:28:644911: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:28:824013: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:29:229927: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:29:398495: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:30:080761: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:30:252595: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:30:740182: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:30:882037: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:31:258025: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:31:416664: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:32:234218: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:33:502485: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:34:164108: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:34:595955: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:34:916376: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:35:307331: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:35:620473: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:39:011119: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:39:325302: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:39:499811: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:30:40:179993: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:30:40:911186: <ssl.SSLSocket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55097), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:31:53:570361: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 17:31:55:620698: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:31:55:621696: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_BALANCE
+20/06/2020 17:31:55:622695: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:31:55:622695: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:00:723037: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:00:723037: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:01:224176: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:01:224176: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:01:980212: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:01:981224: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:02:614623: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:02:615622: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:03:209718: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:03:209718: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:04:101746: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:04:102744: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:04:925351: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:04:925351: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:05:539654: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:05:539654: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:06:573251: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:06:573251: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:07:268175: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:07:268175: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:08:133407: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:08:134405: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:09:143375: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:09:143375: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:10:353470: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:10:353470: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:11:401920: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:11:401920: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:12:644342: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:12:644342: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:13:689914: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:13:689914: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:15:329755: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:15:330752: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:16:385931: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:16:386929: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:17:470380: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:17:470380: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:18:630652: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:18:631649: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:19:879638: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:19:880637: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: GET_LOTTERY_DATE
+20/06/2020 17:32:32:534191: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:34:956234: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: WON_LIST
+20/06/2020 17:32:37:610945: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:32:42:831403: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: MY_COUPONS
+20/06/2020 17:32:46:787033: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 17:32:47:705607: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 17:32:48:549137: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 17:32:49:247793: <ssl.SSLSocket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55112), raddr=('127.0.0.1', 40001)>: LOGOUT
+20/06/2020 18:38:02:137445: <ssl.SSLSocket fd=684, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55235), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 18:38:19:511265: <ssl.SSLSocket fd=684, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55235), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 18:39:40:976848: <ssl.SSLSocket fd=696, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55240), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 18:45:56:491255: <ssl.SSLSocket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55242), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 18:56:56:899176: <socket.socket fd=648, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55260), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 18:57:40:604896: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55261), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 18:58:01:667314: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55261), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 18:58:02:608124: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55261), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 18:58:02:784767: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55261), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 18:58:02:942370: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55261), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 18:58:03:087978: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55261), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 18:58:03:927769: <socket.socket fd=472, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55261), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 18:58:59:286269: <socket.socket fd=464, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55264), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 18:59:02:175526: <socket.socket fd=464, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55264), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:01:10:251282: <socket.socket fd=652, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55265), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 19:01:10:711703: <socket.socket fd=652, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55265), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 19:01:10:992869: <socket.socket fd=652, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55265), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 19:03:06:833214: <socket.socket fd=708, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55271), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 19:03:07:219181: <socket.socket fd=708, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55271), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 19:03:07:411645: <socket.socket fd=708, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55271), raddr=('127.0.0.1', 40001)>: LOGIN a a
+20/06/2020 19:06:53:074062: <socket.socket fd=668, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55278), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:09:08:243279: <socket.socket fd=676, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55280), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:10:36:058520: <socket.socket fd=716, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55281), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:10:36:277219: <socket.socket fd=716, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55281), raddr=('127.0.0.1', 40001)>: DISCONNECT DISCONNECT_OK
+20/06/2020 19:11:58:649216: <socket.socket fd=540, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55282), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:11:58:932787: <socket.socket fd=540, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55282), raddr=('127.0.0.1', 40001)>: DISCONNECT DISCONNECT_OK
+20/06/2020 19:13:23:727381: <socket.socket fd=656, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55284), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:13:23:973270: <socket.socket fd=656, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55284), raddr=('127.0.0.1', 40001)>: DISCONNECT DISCONNECT_OK
+20/06/2020 19:14:41:638123: <socket.socket fd=700, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55286), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:14:41:961778: <socket.socket fd=700, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55286), raddr=('127.0.0.1', 40001)>: DISCONNECT DISCONNECT_OK
+20/06/2020 19:15:59:985837: <socket.socket fd=532, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55287), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:16:00:000792: <socket.socket fd=532, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55287), raddr=('127.0.0.1', 40001)>: DISCONNECT DISCONNECT_OK
+20/06/2020 19:19:41:519986: <socket.socket fd=636, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55289), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:20:20:151088: <socket.socket fd=652, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55290), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:22:07:387300: <socket.socket fd=708, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55296), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:22:39:649023: <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55298), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:22:54:360693: <socket.socket fd=680, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55299), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:24:03:607156: <socket.socket fd=724, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55303), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:27:03:909349: <socket.socket fd=516, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55305), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:32:18:960230: <socket.socket fd=720, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55311), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:32:55:908820: <socket.socket fd=700, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55312), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:33:25:367908: <socket.socket fd=140, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55314), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:34:39:874887: <socket.socket fd=72, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55315), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:35:57:548023: <socket.socket fd=712, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55316), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:36:07:906078: <socket.socket fd=760, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55317), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:38:08:085392: <socket.socket fd=496, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55320), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:40:22:068015: <socket.socket fd=696, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55326), raddr=('127.0.0.1', 40001)>: DISCONNECT
+20/06/2020 19:41:26:868253: <socket.socket fd=656, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 55327), raddr=('127.0.0.1', 40001)>: DISCONNECT

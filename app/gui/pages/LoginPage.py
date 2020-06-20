@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
 from app.gui.config import colors
-from app.utils import Utils
 
 
 class LoginPage(Frame):
@@ -45,7 +44,7 @@ class LoginPage(Frame):
         register_label.config(font=("Aria", 15))
         register_label.grid(row=0, column=0)
 
-        register_button = Button(register_container, text="Zarejestruj się!", bg=colors['light_gray'], command=lambda: controller.navigation(RegisterPage))
+        register_button = Button(register_container, text="Zarejestruj się!", bg=colors['light_gray'], command=self.controller.navigation_to_register)
         register_button.config(height=1, width=10)
         register_button.grid(row=0, column=1)
 

@@ -1,6 +1,8 @@
-from app.config import tcp_socket, connection_config, Connection
+from app.config import connection_config, Connection, lottery_time
 from app.database import Database
 from app.utils import Utils
+import socket
+from app.cert_creator import create_self_signed_cert
 import ssl
 import hashlib
 import sqlite3
@@ -8,17 +10,52 @@ from _thread import *
 import random
 import time
 
-
-
-server_socket = tcp_socket
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind(connection_config)
 server_socket.listen(5)
+
+
+
+class Game:
+    def __init__(self, ):
+        self.time = None
+
+    def start_lottery(self):
+        global d
+        d = Database()
+        idLotto = d.get_last_lottery_id()
+        if not idLotto:
+            d.create_lotto()
+            idLotto = d.get_last_lottery_id()
+        while True:
+            if (time.localtime().tm_sec == 0 and time.localtime().tm_min % lottery_time == 0):
+                numbers = []
+                result = []
+                for i in range(6):
+                    x = False
+                    while (x == False):
+                        r = random.randint(1, 6)
+                        if r not in numbers:
+                            numbers.append(r)
+                            result.append(str(r))
+                            x = True
+
+                d = Database()
+                result.sort(key=int)
+                d.create_lotto()
+                d.update_lotto_after_lottery(str(idLotto), result)
+                idLotto = d.get_last_lottery_id()
+                del d
+                time.sleep(2)
 
 
 class Connect(Connection):
     def __init__(self, client):
         Connection.__init__(self, client)
         self.userID = None
+
+    def disconnect_action(self, params=None):
+        self.disconnect()
 
     def register_action(self, params=None):
         database = Database()
@@ -38,12 +75,13 @@ class Connect(Connection):
             if params and len(params) == 2:
                 response = database.login(params[0], hashlib.md5(params[1].encode()).digest())
                 self.send_request(response['response'])
-
+                if response['response'] == 'LOGIN LOGIN_OK':
+                    id = response['user_id']
+                    print(id)
+                    self.userID = int(id)
             else:
                 self.send_request('PARAMS_COUNT')
-            id = response['user_id']
-            print(id)
-            self.userID = int(id)
+
         except:
             self.send_request('UNEXPECTED_ERROR')
         del database
@@ -119,6 +157,7 @@ class Connect(Connection):
             self.send_request(response['response'])
         else:
             self.send_request('NO_LOGIN')
+        del database
 
     def unexpected_error_action(self, params=None):
         self.send_request('UNEXPECTED_ERROR')
@@ -126,9 +165,27 @@ class Connect(Connection):
     def no_command_action(self):
         self.send_request('NO_COMMAND')
 
+    def logout_action(self, params=None):
+        self.userID = None
+        self.send_request('LOGOUT LOGOUT_OK')
+
+    def get_lottery_date_action(self, params=None):
+        database = Database()
+        try:
+            response = database.get_next_lottery_date()
+            self.send_request(response['response'])
+        except:
+            self.send_request('UNEXPECTED_ERROR')
+        del database
 
 
 
+g = Game()
+start_new_thread(g.start_lottery, ())
+SERVER_CERT = 'server.cert'
+SERVER_KEY = 'server.key'
 while True:
     client_connect, addr = server_socket.accept()
+    # connstream = ssl.wrap_socket(client_connect, server_side=True, certfile=SERVER_CERT, keyfile=SERVER_KEY)
     client_connection = Connect(client_connect)
+

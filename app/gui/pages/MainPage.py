@@ -41,7 +41,9 @@ class MainPage(Frame):
         self.set_first_page(LottoPage)
 
     def logout(self):
-        self.controller.reset_stack_then_navigate(LoginPage)
+        self.controller.send_request('LOGOUT')
+
+
 
     def navigation(self, context):
         if len(self.navigation_stack) >= 1:

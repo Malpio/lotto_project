@@ -1,4 +1,28 @@
+import time
+from app.config import lottery_time
+
+
 class Utils:
+    @staticmethod
+    def get_lottery_date():
+        days = time.localtime().tm_mday
+        months = time.localtime().tm_mon
+        years = time.localtime().tm_year
+        hours = time.localtime().tm_hour
+        mins = time.localtime().tm_min + lottery_time
+        secs = time.localtime().tm_sec
+        if days < 10:
+            days = "0" + str(days)
+        if months < 10:
+            months = "0" + str(months)
+        if hours < 10:
+            hours = "0" + str(hours)
+        if mins < 10:
+            mins = "0" + str(mins)
+        if secs < 10:
+            secs = "0" + str(secs)
+        return str(days) + "/" + str(months) + "/" + str(years) + " " + str(hours) + ":" + str(mins) + ":" + str(secs)
+
     @staticmethod
     def to_array(string):
         return string.split(' ')
