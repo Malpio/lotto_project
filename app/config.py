@@ -3,6 +3,7 @@ import abc
 from _thread import *
 from datetime import *
 import time
+import ssl
 
 # tcp_socket = serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 connection_config = ('localhost', 40001)
@@ -70,7 +71,7 @@ class Connection:
     def send_request(self, request):
         save_logs(self.connection, request)
         request = request + '\r\n'
-        time.sleep(0.2)
+        time.sleep(0.1)
         self.connection.sendall(request.encode())
 
     def get_response(self):

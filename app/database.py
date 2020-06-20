@@ -195,7 +195,7 @@ class Database:
 
     def get_user_coupons(self, user_id):
         try:
-            self.cursor.execute('select * from coupons where user_id = ? order by coupon_id desc', (user_id,))
+            self.cursor.execute('select * from coupons where user_id = ? order by coupon_id desc limit 15', (user_id,))
             return self.cursor.fetchall()
         except sqlite3.Error:
             return None
@@ -211,7 +211,6 @@ class Database:
             one_element.append(el[4])
             lotto = self.get_lotto_by_id(el[2])
             if not lotto:
-                print('qwe')
                 return {'response': 'UNEXPECTED_ERROR'}
             one_element.append(lotto[0])
             one_element.append(lotto[1])
@@ -240,7 +239,7 @@ class Database:
     def get_won_list(self):
         try:
             self.cursor.execute(
-                'select lottery_date , main_prize, won_numbers, count_of_three, count_of_four, count_of_five, count_of_six from lotto where won_numbers is not null order by lotto_id desc limit 20')
+                'select lottery_date , main_prize, won_numbers, count_of_three, count_of_four, count_of_five, count_of_six from lotto where won_numbers is not null order by lotto_id desc limit 10')
             won_list = Utils.serializer(self.cursor.fetchall())
             return {'response': 'WON_LIST ' + won_list}
         except sqlite3.Error as e:

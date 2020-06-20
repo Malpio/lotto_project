@@ -183,8 +183,13 @@ g = Game()
 start_new_thread(g.start_lottery, ())
 SERVER_CERT = 'server.cert'
 SERVER_KEY = 'server.key'
-while True:
-    client_connect, addr = server_socket.accept()
-    connstream = ssl.wrap_socket(client_connect, server_side=True, certfile=SERVER_CERT, keyfile=SERVER_KEY)
-    client_connection = Connect(connstream)
+try:
+    while True:
+        client_connect, addr = server_socket.accept()
+        connstream = ssl.wrap_socket(client_connect, server_side=True, certfile=SERVER_CERT, keyfile=SERVER_KEY)
+        client_connection = Connect(connstream)
+except Exception as e:
+    print(e)
+
+
 
