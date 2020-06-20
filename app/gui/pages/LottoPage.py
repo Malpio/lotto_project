@@ -95,16 +95,16 @@ class LottoPage(Frame):
 
     def render_lottery_date(self, time):
         date = time.replace('&', ' ')
-        self.main_label.pack_forget()
+        self.main_label.place_forget()
         self.main_label = Label(self, text='Następne losowanie: ' + date)
         self.main_label.config(font=("Aria", 18))
-        self.main_label.pack()
+        self.main_label.place(relx=0.5, rely=0.05, anchor=N)
 
     def render_lottery_prize(self, prize):
-        self.prize.pack_forget()
+        self.prize.place_forget()
         self.prize = Label(self, text='Główna nagroda następnego losowania to ' + prize + ' złotych!')
         self.prize.config(font=("Aria", 18))
-        self.prize.pack()
+        self.prize.place(relx=0.5, rely=0, anchor=N)
 
     def render_list_element(self, container, row, column, text, padx=0, pady=0, bg=None):
         element = Label(container, text=text, bg=bg)

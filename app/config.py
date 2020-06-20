@@ -1,15 +1,13 @@
-import socket
 import abc
 from _thread import *
 from datetime import *
 import time
-import ssl
 
-# tcp_socket = serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 connection_config = ('localhost', 40001)
 date_format = '%d/%m/%Y %H:%M:%S'
 lotto_price = 5
 lottery_time = 2
+
 response_codes = {
     'REGISTER_OK': 'Rejestracja powiodła się',
     'USERNAME_ALREADY_EXIST': 'Użytkownik z taką nazwą już istnieje',
@@ -204,7 +202,3 @@ class Connection:
     @abc.abstractmethod
     def main_prize_action(self, params=None):
         return
-
-    # def sefe_connection(self, public_key, certificate):
-    #     selfcontext = ssl.create_default_context(ssl.Purpose.SERVER_AUTH, cafile='server.crt')
-    #     context.load_cert_chain(certfile='client.crt', keyfile='client.key')

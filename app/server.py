@@ -2,10 +2,8 @@ from app.config import connection_config, Connection, lottery_time
 from app.database import Database
 from app.utils import Utils
 import socket
-from app.cert_creator import create_self_signed_cert
 import ssl
 import hashlib
-import sqlite3
 from _thread import *
 import random
 import time
@@ -34,7 +32,7 @@ class Game:
                 for i in range(6):
                     x = False
                     while (x == False):
-                        r = random.randint(1, 6)
+                        r = random.randint(1, 49)
                         if r not in numbers:
                             numbers.append(r)
                             result.append(str(r))
