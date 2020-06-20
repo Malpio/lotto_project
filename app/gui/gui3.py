@@ -20,7 +20,7 @@ class LottoGUI(Tk, Connection):
         self.is_login = False
 
         self.title('Lotto')
-        self.minsize(1100, 900)
+        self.minsize(1100, 700)
 
         container = Frame(self)
         container.place(relwidth=1, relheight=1)
@@ -35,11 +35,9 @@ class LottoGUI(Tk, Connection):
         self.set_first_page(LoginPage)
 
     def on_closing(self):
-        print('close')
         self.send_request('DISCONNECT')
         self.main_connection = False
         time.sleep(1)
-        # self.disconnect()
         self.destroy()
 
     def navigation(self, context):
@@ -99,9 +97,11 @@ class LottoGUI(Tk, Connection):
             if params[0] == 'LOGIN_OK':
                 self.navigation(MainPage)
                 self.frames[MainPage].frames[LottoPage].get_last_won()
-                self.frames[MainPage].frames[MyAccountPage].get_account_balacne()
-                self.frames[MainPage].frames[MyAccountPage].get_user_coupons()
+                # self.frames[MainPage].frames[MyAccountPage].get_account_balacne()
+                # self.frames[MainPage].frames[MyAccountPage].get_user_coupons()
                 self.frames[MainPage].frames[LottoPage].get_time_to_next_lottery()
+                self.frames[MainPage].frames[LottoPage].get_main_prize()
+
 
     def won_list_action(self, params=None):
         if params:
@@ -145,10 +145,12 @@ class LottoGUI(Tk, Connection):
                 self.reset_stack_then_navigate(LoginPage)
 
     def get_lottery_date_action(self, params=None):
-        print('111', params)
         if params:
-        #     # if params[0].upper() != 'GET_LOTTERY_DATE_FAIL':
             self.frames[MainPage].frames[LottoPage].render_lottery_date(params[0])
+
+    def main_prize_action(self, params=None):
+        if params:
+            self.frames[MainPage].frames[LottoPage].render_lottery_prize(params[0])
 
 
 

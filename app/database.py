@@ -150,6 +150,13 @@ class Database:
         except:
             return 0
 
+    def get_next_lottery_main_prize(self):
+        try:
+            self.cursor.execute('select main_prize from lotto order by lotto_id desc limit 1')
+            return {'response': 'MAIN_PRIZE ' + str(int(self.cursor.fetchone()[0]))}
+        except:
+            return {'response': 'UNEXPECTED_ERROR'}
+
     def update_main_prize(self, lotto_id, prize):
         try:
             new_prize = 1000000 + prize

@@ -9,6 +9,8 @@ class LottoPage(Frame):
         self.controller = controller
         self.main_label = Label(self, text='Następne losowanie za')
 
+        self.prize = Label(self, text='')
+
         self.list = []
 
         # main_label = Label(self, text='Następne losowanie za ' + self.time_to_next_lottery)
@@ -80,11 +82,16 @@ class LottoPage(Frame):
                 column += 1
             row += 1
 
+        # self.render_lottery_prize('23123')
+
     def get_last_won(self):
         self.controller.controller.send_request('WON_LIST')
 
     def get_time_to_next_lottery(self):
         self.controller.controller.send_request('GET_LOTTERY_DATE')
+
+    def get_main_prize(self):
+        self.controller.controller.send_request('MAIN_PRIZE')
 
     def render_lottery_date(self, time):
         date = time.replace('&', ' ')
@@ -92,6 +99,12 @@ class LottoPage(Frame):
         self.main_label = Label(self, text='Następne losowanie: ' + date)
         self.main_label.config(font=("Aria", 18))
         self.main_label.pack()
+
+    def render_lottery_prize(self, prize):
+        self.prize.pack_forget()
+        self.prize = Label(self, text='Główna nagroda następnego losowania to ' + prize + ' złotych!')
+        self.prize.config(font=("Aria", 18))
+        self.prize.pack()
 
     def render_list_element(self, container, row, column, text, padx=0, pady=0, bg=None):
         element = Label(container, text=text, bg=bg)
@@ -102,3 +115,4 @@ class LottoPage(Frame):
     def reset(self):
         self.get_last_won()
         self.get_time_to_next_lottery()
+        self.get_main_prize()
