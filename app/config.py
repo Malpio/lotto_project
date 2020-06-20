@@ -1,12 +1,15 @@
 import socket
 import abc
 from _thread import *
+from datetime import *
+import time
+import ssl
 
-tcp_socket = serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-connection_config = ('127.0.0.1', 40001)
+# tcp_socket = serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+connection_config = ('localhost', 40001)
 date_format = '%d/%m/%Y %H:%M:%S'
 lotto_price = 5
-
+lottery_time = 2
 response_codes = {
     'REGISTER_OK': 'Rejestracja powiodła się',
     'USERNAME_ALREADY_EXIST': 'Użytkownik z taką nazwą już istnieje',
@@ -19,7 +22,9 @@ response_codes = {
     'ADD_BALANCE_OK': 'Konto zostało doładowane',
     'ADD_BALANCE_FAIL': 'Nie udało się dodać środków',
     'NO_LOGIN': 'Nie jesteś zalogowany',
-    'COUPON_BUY_LOTTERY_PROBLEM': 'Problem z wyborem najnowszej loterii'
+    'COUPON_BUY_LOTTERY_PROBLEM': 'Problem z wyborem najnowszej loterii',
+    'LOGOUT_OK': 'Wylogowano pomyślnie',
+    'GET_LOTTERY_DATE_FAIL': 'Błąd podczas pobrania daty loterii'
 }
 
 '''COMMANDS LIST
@@ -36,7 +41,18 @@ response_codes = {
     NO_COMMAND - Nie zdefiniowano akcji dla polecenia
     PARAMS_COUNT - Niepoprawna liczba parametrów
     NO_LOGIN - Nie jesteś zalogowany
+    LOGOUT - Wylogowywanie
+    GET_LOTTERY_DATE - Pobieranie daty następnej loterii
+    DISCONNECT - Zakończenie połączenia
 '''
+
+
+def save_logs(client, action):
+    f = open("log.txt", "a")
+    now = datetime.now()
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S:%f")
+    f.write(dt_string + ": " + str(client) + ": " + str(action) + "\n")
+    f.close()
 
 
 class Connection:
@@ -49,28 +65,33 @@ class Connection:
         start_new_thread(self.get_response, ())
 
     def disconnect(self):
-        self.connection.close()
         self.main_connection = False
-
-    def __del__(self):
         self.connection.close()
 
     def send_request(self, request):
+        save_logs(self.connection, request)
         request = request + '\r\n'
+        time.sleep(0.1)
         self.connection.sendall(request.encode())
-        print('poszlo')
 
     def get_response(self):
         while self.main_connection:
             response = b''
+            temp = False
             while not b'\r\n' in response:
-                data = self.connection.recv(1)
-                response += data
+                try:
+                    data = self.connection.recv(1)
+                    response += data
+                except:
+                    temp = True
+                    break
+            if not self.main_connection or temp:
+                break
             response = response.decode()[:-2]
             command_and_params = Connection.get_command_and_params(response)
             print(command_and_params)
             start_new_thread(self.define_action, (command_and_params['command'], command_and_params['params']))
-
+        del self
 
     @staticmethod
     def get_command_and_params(response):
@@ -86,10 +107,10 @@ class Connection:
 
     def define_action(self, command, params):
         lower_command = command.lower()
-        if lower_command == 'elo':
-            self.save_and_send_key_action(params=params)
-        elif lower_command == 'register':
+        if lower_command == 'register':
             self.register_action(params=params)
+        elif lower_command == 'disconnect':
+            self.disconnect_action(params=params)
         elif lower_command == 'login':
             self.login_action(params=params)
         elif lower_command == 'add_balance':
@@ -110,11 +131,15 @@ class Connection:
             self.no_login_action(params=params)
         elif lower_command == 'params_count':
             self.params_count_action(params=params)
+        elif lower_command == 'logout':
+            self.logout_action(params=params)
+        elif lower_command == 'get_lottery_date':
+            self.get_lottery_date_action(params=params)
         else:
             self.no_command_action()
 
     @abc.abstractmethod
-    def save_and_send_key_action(self, params=None):
+    def disconnect_action(self, params=None):
         return
 
     @abc.abstractmethod
@@ -165,6 +190,13 @@ class Connection:
     def params_count_action(self, params=None):
         return
 
+    @abc.abstractmethod
+    def logout_action(self, params=None):
+        return
+
+    @abc.abstractmethod
+    def get_lottery_date_action(self, params=None):
+        return
     # def sefe_connection(self, public_key, certificate):
     #     selfcontext = ssl.create_default_context(ssl.Purpose.SERVER_AUTH, cafile='server.crt')
     #     context.load_cert_chain(certfile='client.crt', keyfile='client.key')

@@ -77,6 +77,7 @@ class LottoBuyPage(Frame):
         if len(values) != 6 or not is_ok:
             messagebox.showinfo('Kupno Losu', 'Musisz podać 6 różnych wartości z zakresu od od 1 od 49')
         else:
+            values_list.sort(key=int)
             self.controller.controller.send_request('COUPON_BUY ' + Utils.array_serializer(values_list))
 
     # def get_lotto_string(self, values_list):
