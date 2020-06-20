@@ -12,22 +12,22 @@ class Database:
     def register(self, first_name, last_name, login, password):
         print('passw', password)
         try:
-
             self.cursor.execute('insert into users (first_name, last_name, login, password) values (?,?,?,?)', (first_name, last_name, login, password))
-
             self.connection.commit()
             return {'response': 'REGISTER REGISTER_OK'}
-        except sqlite3.Error as e:
-            print('error ', e)
+        except sqlite3.Error:
             return {'response': 'REGISTER USERNAME_ALREADY_EXIST'}
 
     def login(self, login, password):
-        self.cursor.execute('select * from users where login = ? and password = ?', (login, password))
-        user = self.cursor.fetchone()
-        if user:
-            return {'response': 'LOGIN LOGIN_OK', 'user_id': user[0]}
-        else:
-            return {'response': 'LOGIN LOGIN_FAIL'}
+        try:
+            self.cursor.execute('select * from users where login = ? and password = ?', (login, password))
+            user = self.cursor.fetchone()
+            if user:
+                return {'response': 'LOGIN LOGIN_OK', 'user_id': user[0]}
+            else:
+                return {'response': 'LOGIN LOGIN_FAIL'}
+        except:
+            return {'response': 'UNEXPECTED_ERROR'}
 
     def get_user(self, user_id):
         try:
@@ -40,16 +40,17 @@ class Database:
         user = self.get_user(user_id)
         if user:
             balance = str(user[3])
-            return {'response': 'GET_BALANCE ' + balance}
+            return {'response': 'GET_BALANCE ' + balance, 'balance': balance}
         else:
             return {'response': 'UNEXPECTED_ERROR'}
 
     def add_balance(self, user_id, amount):
         update_balance_status = self.update_balance(user_id, amount)
-        if update_balance_status:
-            return {'response': 'BALANCE BALANCE_ADDED'}
+        current_balace = self.get_balance(user_id)
+        if update_balance_status and current_balace['response'] != 'UNEXPECTED_ERROR':
+            return {'response': 'ADD_BALANCE ADD_BALANCE_OK ' + current_balace['balance']}
         else:
-            return {'response': 'UNEXPECTED_ERROR'}
+            return {'response': 'ADD_BALANCE ADD_BALANCE_FAIL'}
 
     def check_balance_enough(self, user_id):
         user = self.get_user(user_id)
@@ -96,31 +97,45 @@ class Database:
         except sqlite3.Error as e:
             return e
 
-    def buy_coupon(self, lotto_id, user_id, numbers):
+    def buy_coupon(self, user_id, numbers):
         if len(numbers) != 6 or not Utils.numbers_in_range(numbers) or not Utils.number_unique(numbers):
             return {'response': 'COUPON_BUY COUPON_INVALID_NUMBERS'}
 
         try:
             if self.check_balance_enough(user_id):
+                lotto_id = self.get_new_lotto_id()
+                print(lotto_id)
+                if not lotto_id:
+                    return {'response': 'COUPON_BUY COUPON_BUY_LOTTERY_PROBLEM'}
                 if self.update_balance(user_id, lotto_price * (-1)):
                     now = datetime.now()
                     bought_date = now.strftime(date_format)
                     serialize_numbers = Utils.to_string(numbers)
-                    self.cursor.execute('insert into coupons (bought_date, lotto_id, user_id, numbers) values (?,?,?,?)', (bought_date, lotto_id, user_id, serialize_numbers))
+                    print(serialize_numbers, type(serialize_numbers))
+                    self.cursor.execute('insert into coupons (bought_date, lotto_id, user_id, numbers) values (?,?,?,?)', (bought_date, lotto_id[0], user_id, serialize_numbers))
                     self.connection.commit()
                     return {'response': 'COUPON_BUY COUPON_BUY_OK'}
                 else:
                     return {'response': 'UNEXPECTED_ERROR'}
             else:
                 return {'response': 'COUPON_BUY NO_ENOUGH_BALANCE'}
-        except sqlite3.Error:
+        except sqlite3.Error as e:
+            print('buy_coupon error', e)
             return {'response': 'UNEXPECTED_ERROR'}
+
+    def get_new_lotto_id(self):
+        try:
+            self.cursor.execute('select lotto_id from lotto where lottery_date is null order by lotto_id desc')
+            return self.cursor.fetchone()
+        except sqlite3.Error as e:
+            print('errpr', e)
+            return None
 
     def get_coupons(self, lotto_id):
         try:
             self.cursor.execute('select * from coupons where lotto_id = ?', (lotto_id,))
             return self.cursor.fetchall()
-        except:
+        except :
             return []
 
     def get_count_of_winners(self, lotto_id, won_numbers):
@@ -172,7 +187,6 @@ class Database:
         result = Utils.serializer(result)
         return {'response': 'MY_COUPONS ' + result}
 
-
     def get_lotto_by_id(self, lotto_id):
         try:
             self.cursor.execute('select IFNULL(won_numbers, "brak"), IFNULL(lottery_date, "brak") from lotto where lotto_id = ?', (lotto_id,))
@@ -180,7 +194,6 @@ class Database:
         except sqlite3.Error as e:
             print(e)
             return None
-
 
     def get_last_lotto(self, count):
         try:
@@ -198,4 +211,3 @@ class Database:
         except sqlite3.Error as e:
             print(e)
             return {'response': 'UNEXPECTED_ERROR'}
-
