@@ -177,7 +177,14 @@ class Connect(Connection):
             self.send_request('UNEXPECTED_ERROR')
         del database
 
-
+    def main_prize_action(self, params=None):
+        database = Database()
+        try:
+            response = database.get_next_lottery_main_prize()
+            self.send_request(response['response'])
+        except:
+            self.send_request('UNEXPECTED_ERROR')
+        del database
 
 g = Game()
 start_new_thread(g.start_lottery, ())

@@ -44,6 +44,7 @@ response_codes = {
     LOGOUT - Wylogowywanie
     GET_LOTTERY_DATE - Pobieranie daty następnej loterii
     DISCONNECT - Zakończenie połączenia
+    MAIN_PRIZE - Sprawdzanie głównej nagrody 
 '''
 
 
@@ -135,6 +136,8 @@ class Connection:
             self.logout_action(params=params)
         elif lower_command == 'get_lottery_date':
             self.get_lottery_date_action(params=params)
+        elif lower_command == 'main_prize':
+            self.main_prize_action(params=params)
         else:
             self.no_command_action()
 
@@ -197,6 +200,11 @@ class Connection:
     @abc.abstractmethod
     def get_lottery_date_action(self, params=None):
         return
+
+    @abc.abstractmethod
+    def main_prize_action(self, params=None):
+        return
+
     # def sefe_connection(self, public_key, certificate):
     #     selfcontext = ssl.create_default_context(ssl.Purpose.SERVER_AUTH, cafile='server.crt')
     #     context.load_cert_chain(certfile='client.crt', keyfile='client.key')
