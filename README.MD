@@ -18,7 +18,7 @@ Użytkownik aby mógł korzystać z wszystkich funkcji musi przede wszystkim utw
 Jeżeli w losowaniu nie padła najwyższa wygrana, pula powięszkona o milion przechodzi do kolejnego losowania.
 
 ## Zastosowane funkcjonalności:
-- ### możliwa obsługa wielu użytkowników jendocześnie
+- ### obsługa wielu użytkowników jendocześnie
 - ### synchronizacja wątków
-- ### zastosowanie asynchroniczności
+- ### asynchroniczności
 - ### połączenie szyfrowane
