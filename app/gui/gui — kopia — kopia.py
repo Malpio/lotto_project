@@ -35,9 +35,11 @@ class LottoGUI(Tk, Connection):
         self.set_first_page(LoginPage)
 
     def on_closing(self):
+        print('close')
         self.send_request('DISCONNECT')
         self.main_connection = False
         time.sleep(1)
+        # self.disconnect()
         self.destroy()
 
     def navigation(self, context):
@@ -143,7 +145,9 @@ class LottoGUI(Tk, Connection):
                 self.reset_stack_then_navigate(LoginPage)
 
     def get_lottery_date_action(self, params=None):
+        print('111', params)
         if params:
+        #     # if params[0].upper() != 'GET_LOTTERY_DATE_FAIL':
             self.frames[MainPage].frames[LottoPage].render_lottery_date(params[0])
 
 

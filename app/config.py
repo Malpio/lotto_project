@@ -2,6 +2,7 @@ import socket
 import abc
 from _thread import *
 from datetime import *
+import time
 
 # tcp_socket = serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 connection_config = ('localhost', 40001)
@@ -62,34 +63,28 @@ class Connection:
         self.main_connection = True
         start_new_thread(self.get_response, ())
 
-    def __del__(self):
-        print('zamknieto')
-
     def disconnect(self):
-        print('disconnect')
         self.main_connection = False
         self.connection.close()
-        print('zamknelo polaczenie')
 
     def send_request(self, request):
-        print('send', request)
         save_logs(self.connection, request)
         request = request + '\r\n'
+        time.sleep(0.2)
         self.connection.sendall(request.encode())
-        print('poszlo')
 
     def get_response(self):
-        print('start getting')
         while self.main_connection:
             response = b''
-            print('pobiera', self.main_connection)
+            temp = False
             while not b'\r\n' in response:
                 try:
                     data = self.connection.recv(1)
                     response += data
                 except:
+                    temp = True
                     break
-            if not self.main_connection:
+            if not self.main_connection or temp:
                 break
             response = response.decode()[:-2]
             command_and_params = Connection.get_command_and_params(response)

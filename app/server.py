@@ -77,7 +77,6 @@ class Connect(Connection):
                 self.send_request(response['response'])
                 if response['response'] == 'LOGIN LOGIN_OK':
                     id = response['user_id']
-                    print(id)
                     self.userID = int(id)
             else:
                 self.send_request('PARAMS_COUNT')
@@ -186,6 +185,6 @@ SERVER_CERT = 'server.cert'
 SERVER_KEY = 'server.key'
 while True:
     client_connect, addr = server_socket.accept()
-    # connstream = ssl.wrap_socket(client_connect, server_side=True, certfile=SERVER_CERT, keyfile=SERVER_KEY)
-    client_connection = Connect(client_connect)
+    connstream = ssl.wrap_socket(client_connect, server_side=True, certfile=SERVER_CERT, keyfile=SERVER_KEY)
+    client_connection = Connect(connstream)
 

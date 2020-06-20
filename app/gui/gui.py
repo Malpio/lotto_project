@@ -35,11 +35,9 @@ class LottoGUI(Tk, Connection):
         self.set_first_page(LoginPage)
 
     def on_closing(self):
-        print('close')
         self.send_request('DISCONNECT')
         self.main_connection = False
         time.sleep(1)
-        # self.disconnect()
         self.destroy()
 
     def navigation(self, context):
@@ -145,9 +143,7 @@ class LottoGUI(Tk, Connection):
                 self.reset_stack_then_navigate(LoginPage)
 
     def get_lottery_date_action(self, params=None):
-        print('111', params)
         if params:
-        #     # if params[0].upper() != 'GET_LOTTERY_DATE_FAIL':
             self.frames[MainPage].frames[LottoPage].render_lottery_date(params[0])
 
 
@@ -161,13 +157,13 @@ SERVER_KEY = 'server.key'
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 try:
     s.connect(connection_config)
-    # print(SERVER_KEY, CLIENT_CERT, CLIENT_KEY)
-    # context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
-    # context.verify_mode = ssl.CERT_REQUIRED
-    # context.load_verify_locations(SERVER_CERT)
-    # context.load_cert_chain(certfile=CLIENT_CERT, keyfile=CLIENT_KEY)
-    # secure_socket = context.wrap_socket(s, server_side=False, server_hostname='localhost')
-    app = LottoGUI(connection=s)
+    print(SERVER_KEY, CLIENT_CERT, CLIENT_KEY)
+    context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+    context.verify_mode = ssl.CERT_REQUIRED
+    context.load_verify_locations(SERVER_CERT)
+    context.load_cert_chain(certfile=CLIENT_CERT, keyfile=CLIENT_KEY)
+    secure_socket = context.wrap_socket(s, server_side=False, server_hostname='localhost')
+    app = LottoGUI(connection=secure_socket)
     app.protocol("WM_DELETE_WINDOW", app.on_closing)
     app.mainloop()
 except socket.error:
