@@ -18,7 +18,11 @@ Użytkownik aby mógł korzystać z wszystkich funkcji musi przede wszystkim utw
 Jeżeli w losowaniu nie padła najwyższa wygrana, pula powięszkona o milion przechodzi do kolejnego losowania.
 
 ## Zastosowane funkcjonalności:
-- ### obsługa wielu użytkowników jendocześnie
+- ### obsługa wielu użytkowników jednocześnie
 - ### synchronizacja wątków
 - ### asynchroniczności
 - ### połączenie szyfrowane
+
+# Uruchmienie aplikacji
+##### Najpierw należy uruchomić serwer: lotto_project/app/server.py
+##### Następnie wybrany klient: lotto_project/app/gui/gui.py, gui2.py, gui3.py 
