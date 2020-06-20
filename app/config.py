@@ -3,7 +3,7 @@ import abc
 from _thread import *
 
 tcp_socket = serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-connection_config = ('127.0.0.1', 40000)
+connection_config = ('127.0.0.1', 40001)
 date_format = '%d/%m/%Y %H:%M:%S'
 lotto_price = 5
 
@@ -18,7 +18,8 @@ response_codes = {
     'COUPON_INVALID_NUMBERS': 'Ilość liczb lub ich wartości są nieprawidłowe',
     'ADD_BALANCE_OK': 'Konto zostało doładowane',
     'ADD_BALANCE_FAIL': 'Nie udało się dodać środków',
-    'NO_LOGIN': 'Nie jesteś zalogowany'
+    'NO_LOGIN': 'Nie jesteś zalogowany',
+    'COUPON_BUY_LOTTERY_PROBLEM': 'Problem z wyborem najnowszej loterii'
 }
 
 '''COMMANDS LIST
@@ -34,6 +35,7 @@ response_codes = {
     WON_LIST - List ostatnich wygranych
     NO_COMMAND - Nie zdefiniowano akcji dla polecenia
     PARAMS_COUNT - Niepoprawna liczba parametrów
+    NO_LOGIN - Nie jesteś zalogowany
 '''
 
 
@@ -104,6 +106,10 @@ class Connection:
             self.won_list_action(params=params)
         elif lower_command == 'get_balance':
             self.get_balance_action(params=params)
+        elif lower_command == 'no_login':
+            self.no_login_action(params=params)
+        elif lower_command == 'params_count':
+            self.params_count_action(params=params)
         else:
             self.no_command_action()
 
@@ -149,6 +155,14 @@ class Connection:
 
     @abc.abstractmethod
     def get_balance_action(self, params=None):
+        return
+
+    @abc.abstractmethod
+    def no_login_action(self, params=None):
+        return
+
+    @abc.abstractmethod
+    def params_count_action(self, params=None):
         return
 
     # def sefe_connection(self, public_key, certificate):

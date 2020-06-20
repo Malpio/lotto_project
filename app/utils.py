@@ -55,3 +55,15 @@ class Utils:
             insite_list = el.split(',')
             result.append(insite_list)
         return result
+
+    @staticmethod
+    def array_serializer(to_serialize):
+        result = ''
+        for el in to_serialize:
+            result += el + '&'
+        return result[:-1]
+
+    @staticmethod
+    def array_deserializer(to_deserialize):
+        result = to_deserialize.split('&')
+        return result
