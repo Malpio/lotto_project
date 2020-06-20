@@ -7,7 +7,7 @@
 
 
 ### Opis aplikacji
-Użytkownik aby mógł korzystać z wszystkich funkcji musi przede wszystkim utworzyć konto (przycisk **Zarejestruj się**). Po zarejestrowaniu się, musi zalogować się do systemu (przycisk **Zaloguj**). Tam najsampierw zobligowany jest do doładowania konta (zakładka **Moje konto**) w celu możliwości stworzenia kuponu kosztującego 5 złotych, umożliwiającego wzięcie udział w losowaniu, którego główna nagroda często przekracza kilka milionów złotych. Aby to zrobić, należy przejść do zakładki **Kup los** i wytypować sześć różnych liczb z przedziału od 1 do 49. Po zatwierdzeniu kuponu, użytkownik musi czekać do losowania w którym zostaną podane zwycięskie liczby. Informacja o godzinie losowania, puli głównej nagrodny, a także historii losowań znajdują się w zakładce **Wyniki Lotto**. Jeżeli losowanie na które użytkownik się odbyło, a zwycięskie liczby znajdowały się na jego kuponie, wygrana zostanie dopisana do jego salda, które sprawdzić może w zakładce **Moje konto**.
+Użytkownik aby mógł korzystać ze wszystkich funkcji musi przede wszystkim utworzyć konto (przycisk **Zarejestruj się**). Po zarejestrowaniu się, musi zalogować się do systemu (przycisk **Zaloguj**). Tam najsampierw zobligowany jest do doładowania konta (zakładka **Moje konto**) w celu możliwości stworzenia kuponu kosztującego 5 złotych, umożliwiającego wzięcie udział w losowaniu, którego główna nagroda często przekracza kilka milionów złotych. Aby to zrobić, należy przejść do zakładki **Kup los** i wytypować sześć różnych liczb z przedziału od 1 do 49. Po zatwierdzeniu kuponu, użytkownik musi czekać do losowania w którym zostaną podane zwycięskie liczby. Informacja o godzinie losowania, puli głównej nagrodny, a także historii losowań znajdują się w zakładce **Wyniki Lotto**. Jeżeli losowanie na które użytkownik się odbyło, a zwycięskie liczby znajdowały się na jego kuponie, wygrana zostanie dopisana do jego salda, które sprawdzić może w zakładce **Moje konto**.
 #### Możliwe wygrane
 *Ilość trafionych liczb* | `Wygrana`
 - | --- |
@@ -23,6 +23,6 @@ Jeżeli w losowaniu nie padła najwyższa wygrana, pula powięszkona o milion pr
 - ### asynchroniczności
 - ### połączenie szyfrowane
 
-# Uruchmienie aplikacji
+# Uruchomienie aplikacji
 ##### Najpierw należy uruchomić serwer: lotto_project/app/server.py
 ##### Następnie wybrany klient: lotto_project/app/gui/gui.py, gui2.py, gui3.py 
